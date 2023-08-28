@@ -6,6 +6,8 @@ import LoanPlans from "./Components/LoanPlans";
 import DepositPlans from "./Components/DepositPlans";
 import FAQSection from "./Components/FAQSection";
 import Services from "./Components/Services";
+import Header from "../Header/Header.jsx";
+
 export default function LandingPage() {
   return (
     <div className="App">
