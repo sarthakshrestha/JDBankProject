@@ -7,6 +7,7 @@
     height: 30rem;
 
     position: relative;
+    top: -113px;
 
     background-image: url("./Image/1.jpg");
     background-repeat: no-repeat;
@@ -14,6 +15,7 @@
     background-size: 100%;
 
     transition: background-image 0.5s;
+    margin-bottom: -30px;
 }
 
 .imageSelectionButtons {

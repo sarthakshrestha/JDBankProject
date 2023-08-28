@@ -23,7 +23,6 @@ export default function App() {
             {/*<Header/>*/}
             {/*<ImageSlider/>*/}
             <LandingPage/>
-            <Footer/>
             {/*<AboutPage/>*/}
             {/*<MeetOurTeam/>*/}
         </div>

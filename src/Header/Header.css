@@ -7,10 +7,7 @@
     display: block;
     width: 100%;
     height: 160px;
-    margin-bottom: 2rem;
-    margin-top: -3rem;
-    background-color: #ffffff;
-    z-index: 1000;
+    top: -100px;
 }
 
 .headerDivider {
@@ -38,7 +35,7 @@
 }
 
 .headerUpper_BankName {
-    width: 160px;
+    width: 180px;
     height: 80px;
     position: relative;
     left: 2%;
@@ -53,7 +50,7 @@
     width: 100px;
     height: 35px;
     position: absolute;
-    right: 9rem;
+    right: 2rem;
     top: 30%;
 
     text-align: center;
@@ -101,17 +98,41 @@ a {
     position: absolute;
     right: 2%;
     top: 30%;
+    text-decoration: underline;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    right: 10%;
+    left: -22px;
+    top: -30px;
+    margin-left: 230px;
 }
 
 .headerLower_SearchBox {
+    display: flex;
+    align-items: center;
     width: 250px;
     height: 35px;
-
     padding-left: 10px;
-
     border: 10px solid white;
     border-radius: 50px;
 }
+
+.headerLower_SearchBox input {
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+
+svg{
+    position: relative;
+    bottom: 7%;
+}
+
 
 .headerLower_SearchBox_button {
     position: absolute;
@@ -122,9 +143,4 @@ a {
 
     border-radius: 50px;
     border: 0px none white;
-}
-
-.headerLower_SearchBox_button img {
-    height: 20px;
-    width: 20px;
 }
