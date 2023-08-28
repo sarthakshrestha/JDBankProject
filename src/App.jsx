@@ -28,13 +28,6 @@ export default function App() {
         {/*<AboutPage/>*/}
         {/*<MeetOurTeam/>*/}
       </div>
-      <div>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/login" element={<LoginPage />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
     </>
   );
 }
