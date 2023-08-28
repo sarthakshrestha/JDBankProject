@@ -14,10 +14,12 @@
 
 .text-container-deposit h2,
 .text-container-deposit h1 {
+  font-size: 72px;
   margin: 0;
   margin-bottom: 10px;
 }
 .text-container-deposit p {
+  font-size: 18px;
   margin: 0;
   padding-top: 10px;
 }
@@ -63,8 +65,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 590px;
+  margin-right: 490px;
   margin-top: 30px;
+  text-align: center;
+
 }
 
 .deposit-icon {
