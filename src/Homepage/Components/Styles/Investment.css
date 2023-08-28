@@ -11,7 +11,7 @@
   text-align: center;
   margin-bottom: 30px;
   font-weight: bold;
-  font-size: 56px;
+  font-size: 72px;
 }
 
 .investment p {
@@ -44,7 +44,7 @@
   height: 100%;
 }
 
-.box-content .h3{
+.box-content h3{
   text-align: center;
 }
 

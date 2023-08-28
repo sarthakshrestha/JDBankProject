@@ -12,7 +12,9 @@
   position: relative;
 }
 
-.text-container-deposit h2,
+.text-container-deposit h2{
+  font-size: 42px;
+}
 .text-container-deposit h1 {
   font-size: 72px;
   margin: 0;
@@ -68,7 +70,6 @@
   margin-right: 490px;
   margin-top: 30px;
   text-align: center;
-
 }
 
 .deposit-icon {
@@ -76,6 +77,5 @@
   width: 500px;
   height: auto;
   margin-top: 70px;
-  right: 0;
-  left: 2px;
+  right: 15px;
 }

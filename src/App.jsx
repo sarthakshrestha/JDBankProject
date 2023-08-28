@@ -10,7 +10,7 @@ import MeetOurTeam from "./ManagmentTeamPage/Components/MeetOurTeam";
 export default function App() {
   return (
     <div className="App">
-      <LandingPage />
+      <MeetOurTeam/>
     </div>
   );
 }

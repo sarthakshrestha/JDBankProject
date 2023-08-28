@@ -12,7 +12,9 @@
   margin-right: 20px;
   position: relative;
 }
-.text-container h2,
+.text-container h2{
+  font-size: 42px;
+}
 .text-container h1 {
   margin: 0;
   margin-bottom: 10px;
