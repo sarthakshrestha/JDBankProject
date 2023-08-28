@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 
 import "./App.css";
 import React from "react";
@@ -12,20 +12,20 @@ import ImageSlider from "./ImageSlider/ImageSlider.jsx";
 import Footer from "./Footer/Footer.jsx";
 
 export default function App() {
-  return (
+    return (
 
-    <div className="App">
-        {/*<>*/}
-        {/*    <Routes>*/}
-        {/*        <Route path="/HomePage" element={{""}}/>*/}
-        {/*    </Routes>*/}
-        {/*</>*/}
-        {/*<Header/>*/}
-        {/*<ImageSlider/>*/}
-        <LandingPage/>
-        <Footer/>
-        {/*<AboutPage/>*/}
-        {/*<MeetOurTeam/>*/}
-    </div>
-  );
+        <div className="App">
+            {/*<>*/}
+            {/*    <Routes>*/}
+            {/*        <Route path="/HomePage" element={{""}}/>*/}
+            {/*    </Routes>*/}
+            {/*</>*/}
+            {/*<Header/>*/}
+            {/*<ImageSlider/>*/}
+            <LandingPage/>
+            <Footer/>
+            {/*<AboutPage/>*/}
+            {/*<MeetOurTeam/>*/}
+        </div>
+    );
 }
