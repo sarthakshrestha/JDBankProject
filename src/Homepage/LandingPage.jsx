@@ -7,10 +7,13 @@ import DepositPlans from "./Components/DepositPlans";
 import FAQSection from "./Components/FAQSection";
 import Services from "./Components/Services";
 import Header from "../Header/Header.jsx";
+import ImageSlider from "../ImageSlider/ImageSlider.jsx";
 
 export default function LandingPage() {
   return (
     <div className="App">
+        <Header/>
+        <ImageSlider/>
       <Money />
       <hr className="separator-line" />
       <Investment />

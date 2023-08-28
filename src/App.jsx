@@ -8,6 +8,8 @@ import AboutPage from "./AboutUspage/Components/AboutPage";
 import MeetOurTeam from "./ManagmentTeamPage/Components/MeetOurTeam";
 import Header from "./Header/Header.jsx";
 import {Route, Routes} from "react-router-dom";
+import ImageSlider from "./ImageSlider/ImageSlider.jsx";
+import Footer from "./Footer/Footer.jsx";
 
 export default function App() {
   return (
@@ -18,8 +20,10 @@ export default function App() {
         {/*        <Route path="/HomePage" element={{""}}/>*/}
         {/*    </Routes>*/}
         {/*</>*/}
-        <Header/>
+        {/*<Header/>*/}
+        {/*<ImageSlider/>*/}
         <LandingPage/>
+        <Footer/>
         {/*<AboutPage/>*/}
         {/*<MeetOurTeam/>*/}
     </div>
