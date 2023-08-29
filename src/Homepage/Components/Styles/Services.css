@@ -1,0 +1,40 @@
+.best-services {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 24px;
+  padding: 50px;
+}
+.service-icons {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 20px;
+}
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.icon {
+  width: auto;
+  height: 70px;
+}
+h3 {
+  margin-top: 10px;
+  padding: 20px;
+}
+.best-services h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bolder;
+
+}
+.best-services p {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}

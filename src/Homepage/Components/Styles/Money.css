@@ -1,0 +1,51 @@
+.function-component {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: -5%;
+}
+
+.function-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 90px;
+}
+
+.function-box {
+  width: 200px;
+  height: 200px;
+  background-color: #ffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  gap: 90px;
+}
+
+.box-content-money {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.icon-money {
+  width: 90px;
+  height: 90px;
+  margin-top: 40px;
+}
+
+.function-box h3 {
+  margin-top: 2px;
+  padding: 20px;
+}
+
+.function-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+}
