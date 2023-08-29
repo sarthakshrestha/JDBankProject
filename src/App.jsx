@@ -22,7 +22,8 @@ export default function App() {
       {/*        <Route path="/HomePage" element={{""}}/>*/}
       {/*    </Routes>*/}
       {/*</>*/}
-      {/*<LoginPage />*/}<Registration/>
+      <LoginPage />
+      {/*<Registration/>*/}
       {/*<Header/>*/}
       {/*<ImageSlider/>*/}
       {/* <LandingPage/>*/}

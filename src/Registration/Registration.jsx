@@ -73,7 +73,10 @@ function Registration() {
     return (<div>
         <div className="register-form">
             <h1>Register</h1>
+            <h2>To be a customer at JD Bank!</h2>
+            <br/>
             <p>We have a team to guide you</p>
+            <br/>
             <form onSubmit={handleSubmit}>
                 <div className="combine_name">
                     <div className="input-container">
@@ -81,7 +84,7 @@ function Registration() {
                         <input
                             type="text"
                             id="firstname"
-                            placeholder="First name"
+                            placeholder="  Enter first name"
                             value={firstName}
                             onChange={(e) => setFirstName(e.target.value)}
                         />
@@ -92,7 +95,7 @@ function Registration() {
                         <input
                             type="text"
                             id="lastname"
-                            placeholder="Last name"
+                            placeholder="  Enter last name"
                             value={lastName}
                             onChange={(e) => setLastName(e.target.value)}
                         />
@@ -104,7 +107,7 @@ function Registration() {
                     <input
                         type="text"
                         id="email"
-                        placeholder="jdname@gmail.com"
+                        placeholder="  jdname@gmail.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
@@ -116,7 +119,7 @@ function Registration() {
                     <input
                         type="password"
                         id="password"
-                        placeholder="Password"
+                        placeholder="  Password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
@@ -128,7 +131,7 @@ function Registration() {
                     <input
                         type="password"
                         id="confirm_password"
-                        placeholder="Confirm Password"
+                        placeholder="  Confirm Password"
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
@@ -150,7 +153,7 @@ function Registration() {
                     <input
                         type="text"
                         id="address"
-                        placeholder="Dhankuta-01"
+                        placeholder="  Dhankuta-01"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
                     />
@@ -163,17 +166,23 @@ function Registration() {
                     <input
                         type="text"
                         id="phoneNumber"
-                        placeholder="9842347865"
+                        placeholder="  9842347865"
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
                     />
                     {errors.phoneNumber && (<span className="error">{errors.phoneNumber}</span>)}
                 </div>
+                <br/>
                 <div className="button">
                     <button>Register</button>
                 </div>
             </form>
-            <p>Already have an account?</p>
+            <div className="already">
+                <p>
+                    Already have an account?{" "}
+                    <a href="#">Click here</a>
+                </p>
+            </div>
             {/* <nav>
           <NavLink to="/login">Log in </NavLink>
         </nav> */}

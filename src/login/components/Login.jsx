@@ -3,6 +3,7 @@ import { loginFields } from "../constants/formFields";
 import FormAction from "./FormAction";
 import FormExtra from "./FormExtra";
 import Input from "./Input";
+import "../pages/LoginPage.css"
 
 const fields = loginFields;
 let fieldsState = {};
@@ -24,8 +25,8 @@ export default function Login() {
   const authenticateUser = () => {};
 
   return (
-    <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-      <div className="-space-y-px">
+    <form className="form" onSubmit={handleSubmit}>
+      <div className="forms">
         {fields.map((field) => (
           <Input
             key={field.id}

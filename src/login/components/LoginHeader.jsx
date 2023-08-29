@@ -7,14 +7,16 @@ export default function LoginHeader({
   linkUrl = "#",
 }) {
   return (
-    <div className="mb-10">
+    <div className="mt-10">
       <div className="d-flex justify-content-center">
+        <br/>
         <img
           src="/Logo.png"
           alt="logo"
           style={{ width: "100px", height: "auto", marginLeft: "80px" }}
         />
       </div>
+        <br/>
       <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
         {heading}
       </h2>
