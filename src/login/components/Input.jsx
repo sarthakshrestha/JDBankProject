@@ -15,9 +15,9 @@ export default function Input({
 }) {
   return (
     <div className="my-5">
-        <br/>
-      <label htmlFor={labelFor} className="sr-only">
+      <label htmlFor={labelFor} className="sr-only"><b>
         {labelText}
+      </b>
       </label>
       <input
         onChange={handleChange}

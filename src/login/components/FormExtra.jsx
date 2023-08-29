@@ -24,7 +24,7 @@ export default function FormExtra() {
                 <a
                     href="#"
                     className="font-medium text-purple-600 hover:text-purple-500"
-                    style={{ fontSize: "14px" }}
+                    style={{ fontSize: "14px", textDecoration: "underline" }}
                 >
                     Forgot your password?
                 </a>

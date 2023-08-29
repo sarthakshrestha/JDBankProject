@@ -4,10 +4,10 @@ const loginFields = [
     labelFor: "email-address",
     id: "email-address",
     name: "email",
-    type: "email",
+    type: "text",
     autoComplete: "email",
     isRequired: true,
-    placeholder: "Email address",
+    placeholder: "Enter your email address",
   },
   {
     labelText: "Password",
@@ -17,7 +17,7 @@ const loginFields = [
     type: "password",
     autoComplete: "current-password",
     isRequired: true,
-    placeholder: "Password",
+    placeholder: "Enter your Password",
   },
 ];
 export { loginFields };
