@@ -7,6 +7,8 @@ import MeetOurTeamPage from "./ManagementTeamPage/Components/MeetOurTeam.jsx";
 import AboutUsPage from "./AboutUspage/AboutUspage";
 import LoginPageNewVersion from "./LoginPage/LoginPageNewVersion";
 import Registration from "./Registration/Registration.jsx"
+import ServicesPage from "./Services/Components/ServicesPage.jsx";
+import ServiceMain from "./Services/ServiceMain.jsx";
 
 export default function App() {
     return (<div className="App">
@@ -33,6 +35,9 @@ export default function App() {
                     <Route path="/Registration" element={<Registration/>}/>
 
                     <Route path="*" element={<h1>PageNotFound!</h1>}/>
+
+                    <Route path="/Services" element={<ServiceMain/>}/>
+
                 </Routes>
             </>
         </div>);
