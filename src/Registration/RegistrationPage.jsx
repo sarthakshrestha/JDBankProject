@@ -5,9 +5,7 @@ import Footer from "../Footer/Footer.jsx";
 export default function RegistrationPage() {
   return (
     <>
-      <Header />
       <Registration />
-      <Footer />
     </>
   );
 }

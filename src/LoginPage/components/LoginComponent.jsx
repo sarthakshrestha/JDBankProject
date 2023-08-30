@@ -2,21 +2,25 @@ import axios from "axios";
 import { useRef } from "react";
 import "./LoginComponent.css";
 
-export default function LoginCompoenent() {
+export default function LoginComponent() {
   let emailRef = useRef("");
   let passwordRef = useRef("");
   let roleRef = useRef("");
 
   function loginHandle() {
+    const data = {
+      email: emailRef.current.value,
+      password: passwordRef.current.value,
+      role: roleRef.current.value,
+    };
+
     axios
-      .post("url", {
-        email: emailRef.current.value,
-        password: passwordRef.current.value,
-        role: roleRef.current.value,
+      .post("http://localhost:8080/home/login", data)
+      .then((response) => {
+        console.log(response);
       })
-      .then((reponse) => {
-        // console.log(reponse.headers.Authorization))
-        console.log(reponse);
+      .catch((error) => {
+        console.error(error);
       });
   }
 
@@ -47,7 +51,7 @@ export default function LoginCompoenent() {
           Log in
         </button>
         <label>Role: </label>
-        <select ref={roleRef}>
+        <select defaultValue="ROLE_USER" ref={roleRef}>
           <option value="ROLE_USER">User</option>
           <option value="ROLE_ADMIN">Admin</option>
           <option value="ROLE_AGENT">Agent</option>
