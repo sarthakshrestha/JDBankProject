@@ -52,29 +52,46 @@ export default function Footer() {
                                     <NavLink to="/HistoryOfJDBank">History of JDBank</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/JD_BankTeam">JD Bank - Team</NavLink>
+                                    <NavLink to="/ManagementTeam">JD Bank - Team</NavLink>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    <div className="FooterleftBottom">
+                    <div className="footerRightBottom">
                         <div className="socialMedia">
                             <h4>Follow Us</h4>
-                            <ul>
-                                <li>
-                                    <NavLink to="">imageFB</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="">imageTW</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="">iamgeInsta</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="">ImageLinkedin</NavLink>
-                                </li>
-                            </ul>
+
+                            <section id="lab_social_icon_footer">
+                                <div class="container">
+                                    <div class="text-center center-block">
+                                        <a href="https://www.facebook.com" target="_blank">
+                                            <i
+                                                id="social-fb"
+                                                class="fa fa-facebook-square fa-3x social"
+                                            ></i>
+                                        </a>
+                                        <a href="https://www.twitter.com" target="_blank">
+                                            <i
+                                                id="social-tw"
+                                                class="fa fa-twitter-square fa-3x social"
+                                            ></i>
+                                        </a>
+                                        <a href="https://www.gmail.com" target="_blank">
+                                            <i
+                                                id="social-gp"
+                                                class="fa fa-google-plus-square fa-3x social"
+                                            ></i>
+                                        </a>
+                                        <a href="https://mailto:#" target="_blank">
+                                            <i
+                                                id="social-em"
+                                                class="fa fa-envelope-square fa-3x social"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                     </div>
                 </div>

@@ -19,6 +19,7 @@ export default function Header() {
         <div className="headerUpper_BankName">JD Bank.co</div>
 
         <button className="headerUpper_AccountButton">Account</button>
+        {/*<button className="headerUpper_LoginButton">Login</button>*/}
       </div>
 
       <div className="headerLower">
@@ -62,3 +63,4 @@ export default function Header() {
     </div>
   );
 }
+

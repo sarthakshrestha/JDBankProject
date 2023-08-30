@@ -1,22 +1,34 @@
-body {
+.registration-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+ResgistrationBody {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 180vh;
   margin: 0;
   background-color: #f0f0f0;
 }
 
+.header-container{
+  width: 198%;
+}
+
 .register-form {
+  position: relative;
+  left: 30%;
   background-color: white;
   border: 3px solid #C1CFFF;
   border-radius: 8px;
   padding: 40px;
-  width: 570px;
+  width: 650px;
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
 }
 
 .register-form h1 {
@@ -59,10 +71,6 @@ body {
   font-weight: bolder;
 }
 
-.icon {
-  width: 40vmin;
-}
-
 .input-group{
   border: none;
   width: 100%;
@@ -84,14 +92,14 @@ body {
   font-size: 18px; /* Adjust the font size */
 }
 
-.button button{
+.register-button button{
   border: 1.5px solid #C1CFFF;
   border: 1.5px solid #C1CFFF;
   background-color: #425aab;
 }
 
-button {
-  background-color: #000000;
+.RegistrationBody button {
+  background-color: #425aab;
   color: white;
   padding: 10px 20px;
   border-radius: 4px;
@@ -114,6 +122,11 @@ button {
   text-decoration: underline;
   color: #425aab;
 }
+
+.footer-container{
+  width: 198%;
+}
+
 
 p {
   color: black;

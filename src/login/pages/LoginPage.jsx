@@ -13,8 +13,9 @@ export default function LoginPage() {
               heading="Login to your account"
               paragraph="Don't have an account yet? "
               linkName="Signup"
-              linkUrl="#"
+              linkUrl="/Registration"
           />
+
           <div className="form-container">
             <Login />
           </div>
