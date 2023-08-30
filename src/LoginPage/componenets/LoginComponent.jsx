@@ -5,12 +5,14 @@ import "./LoginComponent.css";
 export default function LoginCompoenent() {
   let emailRef = useRef("");
   let passwordRef = useRef("");
+  let roleRef = useRef("");
 
   function loginHandle() {
     axios
       .post("url", {
-        user: emailRef.current.value,
+        email: emailRef.current.value,
         password: passwordRef.current.value,
+        role: roleRef.current.value,
       })
       .then((reponse) => {
         // console.log(reponse.headers.Authorization))
@@ -23,7 +25,6 @@ export default function LoginCompoenent() {
       <div className="LoginContainer">
         <h4>You must register to join</h4>
         <p>We have a team to guide you</p>
-
         <div className="emailDiv">
           <p>Email</p>
           <input
@@ -33,7 +34,6 @@ export default function LoginCompoenent() {
             ref={emailRef}
           />
         </div>
-
         <div className="passwordDiv">
           <p>Password</p>
           <input
@@ -43,10 +43,15 @@ export default function LoginCompoenent() {
             ref={passwordRef}
           />
         </div>
-
         <button className="logInButton" onClick={loginHandle}>
           Log in
         </button>
+        <label>Role: </label>
+        <select ref={roleRef}>
+          <option value="ROLE_USER">User</option>
+          <option value="ROLE_ADMIN">Admin</option>
+          <option value="ROLE_AGENT">Agent</option>
+        </select>
       </div>
     </>
   );

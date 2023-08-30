@@ -28,7 +28,6 @@ export default function Header() {
       currentLoc.pathname == "/"
         ? navTo("/Login")
         : navTo(currentLoc.pathname + "/Login");
-      console.log(currentLoc.pathname);
       accoutView.current = true;
     }
   }
