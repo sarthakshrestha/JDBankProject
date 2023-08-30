@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useRef } from "react";
-import "./LoginCompoenent.css";
+import "./LoginComponent.css";
 
 export default function LoginCompoenent() {
   let emailRef = useRef("");

@@ -1,9 +1,9 @@
-import LoginCompoenent from "./componenets/LoginCompoenent";
+import LoginComponent from "./componenets/LoginComponent";
 
 export default function LoginPageNewVersion() {
   return (
     <>
-      <LoginCompoenent />
+      <LoginComponent />
     </>
   );
 }
