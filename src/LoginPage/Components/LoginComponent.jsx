@@ -14,6 +14,8 @@ export default function LoginComponent() {
             role: roleRef.current.value
         };
 
+        // POST
+
         axios.post("http://localhost:8080/home/login", data)
             .then((response) => {
                 console.log(response);
