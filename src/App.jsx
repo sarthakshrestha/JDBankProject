@@ -7,6 +7,7 @@ import MeetOurTeamPage from "./ManagmentTeamPage/MeetOurTeamPage";
 import AboutUsPage from "./AboutUspage/AboutUsPage";
 import RegistrationPage from "./Registration/RegistrationPage";
 import LoginPageNewVersion from "./LoginPage/LoginPageNewVersion";
+import LoginPage from "./Login/pages/LoginPage";
 
 export default function App() {
   return (
@@ -33,7 +34,9 @@ export default function App() {
 
           <Route path="/Registration" element={<RegistrationPage />} />
 
-          <Route path="*" element={<h1>PageNotFound!</h1>} />
+          <Route path="/LoginDefault" element={<LoginPage />} />
+
+          <Route path="*" element={<h1>PageNotFound! :(</h1>} />
         </Routes>
       </>
     </div>

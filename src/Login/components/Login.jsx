@@ -3,7 +3,7 @@ import { loginFields } from "../constants/formFields";
 import FormAction from "./FormAction";
 import FormExtra from "./FormExtra";
 import Input from "./Input";
-import "../pages/LoginPage.css"
+import "../pages/LoginPage.css";
 
 const fields = loginFields;
 let fieldsState = {};
@@ -22,8 +22,23 @@ export default function Login() {
   };
 
   //Handle Login API Integration here
-  const authenticateUser = () => {};
+  const authenticateUser = () => {
+    console.log(loginState);
+    const data = {
+      email: loginState.email - address,
+      password: loginState.password,
+      role: "", //add role value here
+    };
 
+    axios
+      .post("http://localhost:8080/home/login", data)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   return (
     <form className="form" onSubmit={handleSubmit}>

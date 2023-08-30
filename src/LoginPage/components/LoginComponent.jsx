@@ -29,11 +29,12 @@ export default function LoginComponent() {
       <div className="LoginContainer">
         <h4>You must register to join</h4>
         <p>We have a team to guide you</p>
+
         <div className="emailDiv">
           <p>Email</p>
           <input
             type="email"
-            required
+            isRequired
             placeholder="user@gmail.com"
             ref={emailRef}
           />
@@ -42,20 +43,27 @@ export default function LoginComponent() {
           <p>Password</p>
           <input
             type="password"
-            required
+            isRequired
             placeholder="password"
             ref={passwordRef}
           />
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            Forgot Password?
+          </a>
         </div>
+
+        <div className="roleDiv">
+          <p>Role: </p>
+          <select defaultValue="ROLE_USER" ref={roleRef}>
+            <option value="ROLE_USER">User</option>
+            <option value="ROLE_ADMIN">Admin</option>
+            <option value="ROLE_AGENT">Agent</option>
+          </select>
+        </div>
+
         <button className="logInButton" onClick={loginHandle}>
           Log in
         </button>
-        <label>Role: </label>
-        <select defaultValue="ROLE_USER" ref={roleRef}>
-          <option value="ROLE_USER">User</option>
-          <option value="ROLE_ADMIN">Admin</option>
-          <option value="ROLE_AGENT">Agent</option>
-        </select>
       </div>
     </>
   );

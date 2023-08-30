@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 
 export default function Header() {
-  let accoutView = useRef(false);
+  const accoutView = useRef(false);
   let currentLoc = useLocation();
 
   const navTo = useNavigate();

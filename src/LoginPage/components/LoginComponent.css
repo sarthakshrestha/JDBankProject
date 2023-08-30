@@ -4,7 +4,7 @@
 
 .LoginContainer {
   width: 350px;
-  height: 350px;
+  height: 400px;
   z-index: 1000;
   position: absolute;
 
@@ -13,6 +13,7 @@
 
   background-color: #f0f0f0;
   border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 
   text-align: center;
 }
@@ -41,11 +42,14 @@
   border-radius: 10px;
 
   outline: none;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   background-color: white;
 
   font-size: 14px;
   margin-bottom: 10px;
+}
+
+.LoginContainer input:focus {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
 .emailDiv {
@@ -62,10 +66,24 @@
   left: -80px;
 }
 
+.passwordDiv a {
+  position: absolute;
+  right: 60px;
+  bottom: 100px;
+
+  font-size: 12px;
+}
+
+.roleDiv {
+  position: relative;
+  right: 90px;
+  bottom: 24px;
+}
+
 .logInButton {
   position: relative;
-  top: 20px;
-  left: -80px;
+  top: -5px;
+  left: -85px;
 
   padding: 10px 20px;
 
@@ -84,5 +102,10 @@
 }
 
 .logInButton:hover {
-  background-color: black;
+  /* background-color: black; */
+  background-color: #31407d;
+}
+
+.logInButton:focus {
+  outline: none;
 }

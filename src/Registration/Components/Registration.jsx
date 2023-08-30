@@ -212,7 +212,7 @@ function Registration() {
           </div>
         </form>
         <div className="already">
-          <NavLink to="/Login">
+          <NavLink to="/LoginDefault">
             <p>Already have an account?</p>
           </NavLink>
         </div>
