@@ -1,0 +1,84 @@
+/* Component-specific styles */
+.whole-form {
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: -25px 0 0 0;
+}
+
+.whole-form button {
+  margin: 10px;
+  color: black;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  left: 20%;
+}
+
+.form-container {
+  background-color: #c1cfff;
+  padding: 20px;
+  width: 220px;
+}
+
+.form-container {
+  background-color: #f0f0f0;
+  padding: 30px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container label {
+  font-size: 18px;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #e9e9e9;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.subheading {
+  font-size: 26px;
+  text-align: center;
+}
+
+.form-container button {
+  background-color: #425aab;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #31407d;
+}
+
+.form-container .error {
+  font-size: 14px;
+  color: red;
+  margin-top: 8px;
+}

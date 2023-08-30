@@ -1,12 +1,36 @@
+import { useRef } from "react";
 import "./Header.css";
 import logo from "./Images/Logo.png";
-import searchImage from "./Images/SearchImage.png";
 
-import { Link, NavLink } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  Outlet,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 
 export default function Header() {
+  let accoutView = useRef(false);
+  let currentLoc = useLocation();
+
+  const navTo = useNavigate();
+
   function searchHandle(element) {
     console.log(element.target.value);
+  }
+
+  function accoutButtonHandler() {
+    if (accoutView.current == true) {
+      navTo(-1);
+      accoutView.current = false;
+    } else {
+      currentLoc.pathname == "/"
+        ? navTo("/Login")
+        : navTo(currentLoc.pathname + "/Login");
+      console.log(currentLoc.pathname);
+      accoutView.current = true;
+    }
   }
 
   return (
@@ -18,7 +42,13 @@ export default function Header() {
 
         <div className="headerUpper_BankName">JD Bank.co</div>
 
-        <button className="headerUpper_AccountButton">Account</button>
+        <button
+          className="headerUpper_AccountButton"
+          onClick={accoutButtonHandler}
+        >
+          Account
+        </button>
+        <Outlet />
       </div>
 
       <div className="headerLower">

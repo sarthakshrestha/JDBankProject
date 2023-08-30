@@ -66,6 +66,10 @@
   transition: 600ms;
 }
 
+.headerUpper_AccountButton:focus {
+  outline: none;
+}
+
 .headerLower {
   position: relative;
   display: block;

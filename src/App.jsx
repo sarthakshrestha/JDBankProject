@@ -6,15 +6,30 @@ import LandingPage from "./Homepage/LandingPage";
 import MeetOurTeamPage from "./ManagmentTeamPage/MeetOurTeamPage";
 import AboutUsPage from "./AboutUspage/AboutUsPage";
 import RegistrationPage from "./Registration/RegistrationPage";
+import LoginPageNewVersion from "./LoginPage/LoginPageNewVersion";
 
 export default function App() {
   return (
     <div className="App">
       <>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/ManagementTeam" element={<MeetOurTeamPage />} />
-          <Route path="/AboutUsPage" element={<AboutUsPage />} />
+          <Route path="/" element={<LandingPage />}>
+            <Route path="/Login" element={<LoginPageNewVersion />} />
+          </Route>
+
+          <Route path="/ManagementTeam" element={<MeetOurTeamPage />}>
+            <Route
+              path="/ManagementTeam/Login"
+              element={<LoginPageNewVersion />}
+            />
+          </Route>
+
+          <Route path="/AboutUsPage" element={<AboutUsPage />}>
+            <Route
+              path="/AboutUsPage/Login"
+              element={<LoginPageNewVersion />}
+            />
+          </Route>
 
           <Route path="/Registration" element={<RegistrationPage />} />
 
