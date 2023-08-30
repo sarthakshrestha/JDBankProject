@@ -7,7 +7,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 70px;
+    padding: 60px;
+    position: relative;
+    top: -8rem;
 }
 
 .about-description {
@@ -16,11 +18,10 @@ body {
     padding-left: 20px;
     flex: 1;
     position: relative;
-    font-size: 20px;
 }
 
 .about-description h2 {
-    font-size: 42px;
+    font-size: 72px;
 }
 
 .about-content {
@@ -29,13 +30,19 @@ body {
 }
 
 .establishment-content h2 {
-    font-size: 42px;
+    font-size: 72px;
 }
 
 .establishment-content {
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 34px;
+}
+
+.establishment-description p {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
 }
 
 .about-description h2 {
@@ -46,6 +53,7 @@ body {
 .about-description p {
     margin: 0;
     padding-top: 10px;
+    font-size: 22px;
 }
 
 .about-image img {
