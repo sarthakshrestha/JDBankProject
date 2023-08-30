@@ -7,7 +7,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 70px;
+    padding: 60px;
+    position: relative;
+    top: -8rem;
 }
 
 .about-description {
