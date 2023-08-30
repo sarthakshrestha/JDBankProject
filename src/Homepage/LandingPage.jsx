@@ -13,7 +13,6 @@ import Footer from "../Footer/Footer.jsx";
 export default function LandingPage() {
     return (
         <div className="App">
-            <Header/>
             <ImageSlider/>
             <Money/>
             <hr className="separator-line"/>
@@ -26,7 +25,6 @@ export default function LandingPage() {
             <FAQSection/>
             <hr className="separator-line"/>
             <Services/>
-            <Footer/>
         </div>
     );
 }

@@ -2,11 +2,11 @@ import "./App.css";
 import React from "react";
 import {Route, Routes} from "react-router-dom";
 
-import LandingPage from "./Homepage/LandingPage";
+import LandingPage from "./Homepage/Homepage";
 import MeetOurTeamPage from "./ManagementTeamPage/Components/MeetOurTeam.jsx";
-import AboutUsPage from "./AboutUspage/Components/AboutPage";
-import RegistrationPage from "./Registration/Registration";
+import AboutUsPage from "./AboutUspage/AboutUspage";
 import LoginPageNewVersion from "./LoginPage/LoginPageNewVersion";
+import Registration from "./Registration/Registration.jsx"
 
 export default function App() {
     return (<div className="App">
@@ -30,7 +30,7 @@ export default function App() {
                         />
                     </Route>
 
-                    <Route path="/Registration" element={<RegistrationPage/>}/>
+                    <Route path="/Registration" element={<Registration/>}/>
 
                     <Route path="*" element={<h1>PageNotFound!</h1>}/>
                 </Routes>

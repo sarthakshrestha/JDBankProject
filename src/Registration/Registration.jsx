@@ -72,128 +72,123 @@ function Registration() {
             //now can submit the form
         }
     };
-
-    return (<div className="registration-page">
+    return (<div className="RegistrationBody">
             <div className="header-container">
                 <Header/>
-                <div/>
-                <div className="RegistrationBody">
-                    <div className="register-form">
-                        <h1>Register</h1>
-                        <h2>To be a customer at JD Bank!</h2>
-                        <br/>
-                        <p>We have a team to guide you</p>
-                        <br/>
-                        <form onSubmit={handleSubmit}>
-                            <div className="combine_name">
-                                <div className="input-container">
-                                    <label>First Name</label>
-                                    <input
-                                        type="text"
-                                        id="firstname"
-                                        placeholder="  Enter first name"
-                                        value={firstName}
-                                        onChange={(e) => setFirstName(e.target.value)}
-                                    />
-                                    {errors.firstName && (<span className="error">{errors.firstName}</span>)}
-                                </div>
-                                <div className="input-container">
-                                    <label>Last Name</label>
-                                    <input
-                                        type="text"
-                                        id="lastname"
-                                        placeholder="  Enter last name"
-                                        value={lastName}
-                                        onChange={(e) => setLastName(e.target.value)}
-                                    />
-                                    {errors.lastName && (<span className="error">{errors.lastName}</span>)}
-                                </div>
-                            </div>
-                            <div className="input-container">
-                                <label> Email</label>
-                                <input
-                                    type="text"
-                                    id="email"
-                                    placeholder="  jdname@gmail.com"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
-                                {errors.email && <span className="error">{errors.email}</span>}
-                            </div>
-                            <div className="input-container">
-                                <label> Password</label>
-                                {/*<FaLock className="icon" />*/}
-                                <input
-                                    type="password"
-                                    id="password"
-                                    placeholder="  Password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                />
-                                {errors.password && (<span className="error">{errors.password}</span>)}
-                            </div>
-                            <div className="input-container">
-                                <label> Confirm Password</label>
-                                {/*<FaLock className="icon" />*/}
-                                <input
-                                    type="password"
-                                    id="confirm_password"
-                                    placeholder="  Confirm Password"
-                                    value={confirmPassword}
-                                    onChange={(e) => setConfirmPassword(e.target.value)}
-                                />
-                                {errors.confirmPassword && (
-                                    <span className="error">{errors.confirmPassword}</span>)}
-                            </div>
-                            <div className="input-container">
-                                <label> Date of Birth</label>
-                                <input
-                                    type="date"
-                                    id="dob"
-                                    value={dob}
-                                    onChange={(e) => setDob(e.target.value)}
-                                />
-                                {errors.dob && <span className="error">{errors.dob}</span>}
-                            </div>
-                            <div className="input-container">
-                                <label> Address</label>
-                                {/*<FaLocationDot className="icon" />*/}
-                                <input
-                                    type="text"
-                                    id="address"
-                                    placeholder="  Dhankuta-01"
-                                    value={address}
-                                    onChange={(e) => setAddress(e.target.value)}
-                                />
-                                {errors.address && <span className="error">{errors.address}</span>}
-                            </div>
-                            <div className="input-container">
-                                <label> Phone Number</label>
-                                {/*<FaPhoneAlt className="icon" />*/}
-                                {/* <FaCalendarAlt className="icon" /> */}
-                                <input
-                                    type="text"
-                                    id="phoneNumber"
-                                    placeholder="  9842347865"
-                                    value={phoneNumber}
-                                    onChange={(e) => setPhoneNumber(e.target.value)}
-                                />
-                                {errors.phoneNumber && (<span className="error">{errors.phoneNumber}</span>)}
-                            </div>
-                            <br/>
-                            <div className="register-button">
-                                <button>Register</button>
-                            </div>
-                        </form>
-                        <div className="already">
-                            <p>Already have an account?</p><NavLink to="/LoginPage">Click Here</NavLink>
-
+            </div>
+            <div className="register-form">
+                <h1>Register</h1>
+                <h2>To be a customer at JD Bank!</h2>
+                <br/>
+                <p>We have a team to guide you</p>
+                <br/>
+                <form onSubmit={handleSubmit}>
+                    <div className="combine_name">
+                        <div className="input-container">
+                            <label>First Name</label>
+                            <input
+                                type="text"
+                                id="firstname"
+                                placeholder="  Enter first name"
+                                value={firstName}
+                                onChange={(e) => setFirstName(e.target.value)}
+                            />
+                            {errors.firstName && (<span className="error">{errors.firstName}</span>)}
                         </div>
-                        {/* <nav>
-        </nav> */}
+                        <div className="input-container">
+                            <label>Last Name</label>
+                            <input
+                                type="text"
+                                id="lastname"
+                                placeholder="  Enter last name"
+                                value={lastName}
+                                onChange={(e) => setLastName(e.target.value)}
+                            />
+                            {errors.lastName && (<span className="error">{errors.lastName}</span>)}
+                        </div>
                     </div>
-                    <div/>
+                    <div className="input-container">
+                        <label> Email</label>
+                        <input
+                            type="text"
+                            id="email"
+                            placeholder="  jdname@gmail.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        {errors.email && <span className="error">{errors.email}</span>}
+                    </div>
+                    <div className="input-container">
+                        <label> Password</label>
+                        {/*<FaLock className="icon" />*/}
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="  Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        {errors.password && (<span className="error">{errors.password}</span>)}
+                    </div>
+                    <div className="input-container">
+                        <label> Confirm Password</label>
+                        {/*<FaLock className="icon" />*/}
+                        <input
+                            type="password"
+                            id="confirm_password"
+                            placeholder="  Confirm Password"
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                        />
+                        {errors.confirmPassword && (
+                            <span className="error">{errors.confirmPassword}</span>)}
+                    </div>
+                    <div className="input-container">
+                        <label> Date of Birth</label>
+                        <input
+                            type="date"
+                            id="dob"
+                            value={dob}
+                            onChange={(e) => setDob(e.target.value)}
+                        />
+                        {errors.dob && <span className="error">{errors.dob}</span>}
+                    </div>
+                    <div className="input-container">
+                        <label> Address</label>
+                        {/*<FaLocationDot className="icon" />*/}
+                        <input
+                            type="text"
+                            id="address"
+                            placeholder="  Dhankuta-01"
+                            value={address}
+                            onChange={(e) => setAddress(e.target.value)}
+                        />
+                        {errors.address && <span className="error">{errors.address}</span>}
+                    </div>
+                    <div className="input-container">
+                        <label> Phone Number</label>
+                        {/*<FaPhoneAlt className="icon" />*/}
+                        {/* <FaCalendarAlt className="icon" /> */}
+                        <input
+                            type="text"
+                            id="phoneNumber"
+                            placeholder="  9842347865"
+                            value={phoneNumber}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
+                        />
+                        {errors.phoneNumber && (<span className="error">{errors.phoneNumber}</span>)}
+                    </div>
+                    <br/>
+                    <div className="register-button">
+                        <button>Register</button>
+                    </div>
+                </form>
+                <div className="already">
+                    <p>Already have an account?</p><NavLink to="/Login">Click Here</NavLink>
+
                 </div>
+                {/* <nav>
+        </nav> */}
             </div>
             <div className="footer-container">
                 <Footer/>

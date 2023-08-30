@@ -1,139 +1,121 @@
-.registration-page {
+.RegistrationBody {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
+  min-height: 100vh;
 }
 
-ResgistrationBody {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  background-color: #f0f0f0;
-}
-
-.header-container{
-  width: 198%;
+.header-container {
+  width: 200%;
 }
 
 .register-form {
-  position: relative;
-  left: 30%;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
   background-color: white;
-  border: 3px solid #C1CFFF;
+  border: 2px solid #e1e5eb;
   border-radius: 8px;
-  padding: 40px;
-  width: 650px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 2rem;
-  margin-bottom: 10rem;
 }
 
 .register-form h1 {
   color: #425aab;
-  font-size: 55px;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
   text-decoration: underline;
 }
 
 .register-form h2 {
   color: cornflowerblue;
-  margin-bottom: -20px;
-  font-size: 25px;
+  margin: 0;
+  font-size: 1.25rem;
 }
 
 .register-form p {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #425aab;
-  font-weight: bold;
+  margin: 1rem 0;
+  font-size: 1.125rem;
+  color: #555;
 }
 
 .combine_name {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .input-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
 .input-container label {
-  font-size: 23px;
-  color: #555555;
-  margin-bottom: 6px;
-  display:block;
-  font-weight: bolder;
-}
-
-.input-group{
-  border: none;
-  width: 100%;
-  padding: 10px 12px; /* Adjust the padding values */
-  border-radius: 4px;
-  background-color: #C1CFFF;
-  font-size: 16px; /* Adjust the font size */
-
+  font-size: 1.125rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .input-container input[type="text"],
 .input-container input[type="password"],
 .input-container input[type="date"] {
-  border: none;
+  border: 1px solid #ccc;
   width: 100%;
-  padding: 10px 0px; /* Adjust the padding values */
-  border-radius: 12px;
+  padding: 0.75rem;
+  border-radius: 6px;
   background-color: #f5f5f5;
-  font-size: 18px; /* Adjust the font size */
+  font-size: 1rem;
 }
 
-.register-button button{
-  border: 1.5px solid #C1CFFF;
-  border: 1.5px solid #C1CFFF;
-  background-color: #425aab;
-}
-
-.RegistrationBody button {
+.register-button button {
   background-color: #425aab;
   color: white;
-  padding: 10px 20px;
+  padding: 0.75rem 1.5rem;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.register-button button:hover {
+  background-color: #344d92;
 }
 
 .error {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: red;
   margin-top: 4px;
 }
 
-.already{
-  font-size: 20px;
+.already {
+  font-size: 1rem;
+  margin-top: 1rem;
 }
 
-.already a{
-  font-size: 20px;
+.already a {
+  font-size: 1rem;
   text-decoration: underline;
   color: #425aab;
 }
 
-.footer-container{
-  width: 198%;
+.footer-container {
+  width: 200%;
+  margin-top: 2rem;
 }
-
 
 p {
   color: black;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
   .register-form {
-    width: 90%;
+    padding: 1.5rem;
   }
 }
