@@ -81,11 +81,11 @@ function Registration() {
         address: address,
         phoneNumber: phoneNumber,
         dateOfBrith: dob,
-        account: { balance: "0" },
+        account: { balance: "1000" },
       };
 
       axios
-        .post("url", registerData)
+        .post("Add URL Here!", registerData)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     }
