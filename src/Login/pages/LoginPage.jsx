@@ -8,7 +8,7 @@ import "./LoginPage.css";
 export default function LoginPage() {
   return (
     <>
-      <Header style="width:300%;" />
+      <Header />
       <div className="whole-form">
         <LoginHeader
           heading="Login to your account"

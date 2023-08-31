@@ -3,6 +3,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import LandingPage from "./Homepage/LandingPage";
+import ServicesMain from "./Services/ServiceMain";
 import MeetOurTeamPage from "./ManagmentTeamPage/MeetOurTeamPage";
 import AboutUsPage from "./AboutUspage/AboutUsPage";
 import RegistrationPage from "./Registration/RegistrationPage";
@@ -16,6 +17,10 @@ export default function App() {
         <Routes>
           <Route path="/" element={<LandingPage />}>
             <Route path="/Login" element={<LoginPageNewVersion />} />
+          </Route>
+
+          <Route path="/Services" element={<ServicesMain />}>
+            <Route path="/Services/Login" element={<LoginPageNewVersion />} />
           </Route>
 
           <Route path="/ManagementTeam" element={<MeetOurTeamPage />}>
