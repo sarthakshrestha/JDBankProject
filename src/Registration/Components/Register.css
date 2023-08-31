@@ -20,6 +20,8 @@
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  position: relative;
+  top: -40px;
 }
 
 .register-form h1 {

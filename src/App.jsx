@@ -6,9 +6,13 @@ import LandingPage from "./Homepage/Homepage";
 import MeetOurTeamPage from "./ManagementTeamPage/Components/MeetOurTeam.jsx";
 import AboutUsPage from "./AboutUspage/AboutUspage";
 import LoginPageNewVersion from "./LoginPage/LoginPageNewVersion";
-import Registration from "./Registration/Registration.jsx"
+import Registration from "./Registration/Components/Registration.jsx"
 import ServicesPage from "./Services/Components/ServicesPage.jsx";
 import ServiceMain from "./Services/ServiceMain.jsx";
+// import Dashboard from "./AdminDashboard/Components/Dashboard.jsx";
+// import RootAdmin from "./Layouts/RootAdmin.jsx";
+// import ShowAdmin from "./AdminDashboard/Components/ShowAdmin.jsx";
+// import AdminMain from "./AdminDashboard/AdminMain.jsx";
 
 export default function App() {
     return (<div className="App">

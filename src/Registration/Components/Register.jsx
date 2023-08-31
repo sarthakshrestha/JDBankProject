@@ -87,7 +87,7 @@ const Register = () => {
         const v1 = USER_REGEX.test(user);
         const v2 = PASS_REGEX.test(pass);
         if (!v1 || !v2) {
-            console.log("ERror");
+            console.log("Error");
         }
         try {
             const response = await axios.post(
@@ -102,12 +102,13 @@ const Register = () => {
             console.log(JSON.stringify(response));
         } catch (err) {
             if (!err?.response) {
-                console.log("SErver problem");
+                console.log("Server problem");
             } else {
                 console.log("Registration Failed");
             }
         }
     };
+
 
     return (
         <div>

@@ -4,9 +4,9 @@ import "./Register.css";
 import {FaEnvelope, FaCalendarAlt, FaPhoneAlt} from "react-icons/fa";
 import {FaLocationDot} from "react-icons/fa6";
 import {NavLink} from "react-router-dom";
-import Header from "../Header/Header.jsx";
-import Footer from "../Footer/Footer.jsx";
-
+import Header from "../../Header/Header.jsx";
+import Footer from "../../Footer/Footer.jsx";
+import axios from "axios";
 
 function Registration() {
     const [firstName, setFirstName] = useState("");
@@ -24,13 +24,14 @@ function Registration() {
 
         if (!firstName) {
             newErrors.firstName = "FirstName must be provided";
-        } else if (firstName.length > 4 || firstName.length < 15) {
-            newErrors.firstName = "First name must be greater than 4 and less than 15";
+        } else if (firstName.length < 4 || firstName.length > 15) {
+            newErrors.firstName =
+                "First name must be greater than 4 and less than 15";
         }
 
         if (!lastName) {
             newErrors.lastName = "LastName must be provided";
-        } else if (lastName.length > 4 || lastName.length < 20) {
+        } else if (lastName.length < 4 || lastName.length > 20) {
             newErrors.lastName = "Last name must be greater than 4 and less than 20";
         }
 
@@ -69,7 +70,22 @@ function Registration() {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (validateForm()) {
-            //now can submit the form
+            //Post data
+            const registerData = {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: password,
+                address: address,
+                phoneNumber: phoneNumber,
+                dateOfBrith: dob,
+                account: {balance: "1000"},
+            };
+
+            axios
+                .post("http://localhost:8080/home/register", registerData)
+                .then((res) => console.log(res))
+                .catch((err) => console.log(err));
         }
     };
     return (<div className="RegistrationBody">
@@ -140,8 +156,7 @@ function Registration() {
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
                         />
-                        {errors.confirmPassword && (
-                            <span className="error">{errors.confirmPassword}</span>)}
+                        {errors.confirmPassword && (<span className="error">{errors.confirmPassword}</span>)}
                     </div>
                     <div className="input-container">
                         <label> Date of Birth</label>
