@@ -20,7 +20,7 @@ function AllPlans({ plans }) {
                     <tbody>
                     {plans.map((plans) => (
                         <tr key={plans.id}>
-                            <td>{plans.id}</td>
+                            <td>{plans.plan_id}</td>
                             <td>{plans.details}</td>
                             <td>{plans.interestRate}</td>
                         </tr>
