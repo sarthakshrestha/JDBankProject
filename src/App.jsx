@@ -16,6 +16,7 @@ import UserTable from "./Dashboard/Components/ViewUsers/UserTable.jsx";
 import AllUsers from "./Dashboard/Components/ViewUsers/AllUsers.jsx";
 import ViewAllUsers from "./Dashboard/ViewAllUsers.jsx";
 import ViewAllAgents from "./Dashboard/ViewAllAgents.jsx";
+import ViewAllPlans from "./Dashboard/ViewAllPlans.jsx";
 // import ShowAdmin from "./DashBoards/AdminDashboard/ShowAdmin.jsx";
 // import ShowDashBoard from "./DashBoards/UserDashboard/ShowDashBoard.jsx";
 // import Dashboard from "./AdminDashboard/Components/Dashboard.jsx";
@@ -58,6 +59,8 @@ export default function App() {
                     <Route path ="/Admin/Users" element={<ViewAllUsers/>}/>
 
                     <Route path ="/Admin/Agents" element={<ViewAllAgents/>}/>
+
+                    <Route path ="/Admin/Plans" element={<ViewAllPlans/>}/>
 
                     <Route path="/Admin" element={<AdminDashboard/>}>
                         {/*<Route path="/AllUsers" element={<AllUsers users={users} />} />*/}

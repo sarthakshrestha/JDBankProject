@@ -22,7 +22,7 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/transactions">
+                    <Link to="/Admin/Plans">
                         <i className="fas fa-exchange-alt"></i> View Plans
                     </Link>
                 </li>
