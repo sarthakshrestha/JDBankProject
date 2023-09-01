@@ -54,7 +54,7 @@ export default function App() {
 
                     <Route path="/FAQ" element={<FAQMain/>}/>
 
-                    <Route path ="/Users" element={<ViewAllUsers/>}/>
+                    <Route path ="/Admin/Users" element={<ViewAllUsers/>}/>
 
                     <Route path="/Admin" element={<AdminDashboard/>}>
                         {/*<Route path="/AllUsers" element={<AllUsers users={users} />} />*/}

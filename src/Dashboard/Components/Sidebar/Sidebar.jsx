@@ -2,16 +2,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import "../../Styles/Sidebar.css";
+import logo from "./Logo.png";
 
 const Sidebar = () => {
     return (
         <div className="sidebar">
             <div className="logo">
-                <img src="Logo.png" alt="Logo" /> {/* Replace with the actual path to your logo image */}
+                <img src={logo} alt="Logo" /> {/* Replace with the actual path to your logo image */}
             </div>
-            {/*<div className="title">*/}
-            {/*    <h1>Admin Dashboard</h1>*/}
-            {/*</div>*/}
             <ul>
                 <li>
                     <Link to="/Admin">
@@ -19,7 +17,7 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/Users">
+                    <Link to="/Admin/Users">
                         <i className="fas fa-users"></i> View Users
                     </Link>
                 </li>

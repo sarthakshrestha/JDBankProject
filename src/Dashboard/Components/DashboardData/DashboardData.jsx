@@ -26,11 +26,11 @@ export default function DashboardData({ users, agents }) {
                     </thead>
                     <tbody>
                     {users.slice(0,5).map((user) => (
-                        <tr key={user.id}>
+                        <tr key={user.user_id}>
                             <td>{user.id}</td>
                             <td>{user.firstName}</td>
                             <td>{user.lastName}</td>
-                            <td>{user.dob}</td>
+                            <td>{user.dateOfBirth}</td>
                             <td>{user.email}</td>
                             <td>{user.address}</td>
                             <td>{user.phoneNumber}</td>

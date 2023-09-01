@@ -20,10 +20,10 @@ function UserTable({users}) {
                     <tbody>
                     {users.map((user) => (
                         <tr key={user.id}>
-                            <td>{user.id}</td>
+                            <td>{user.user_id}</td>
                             <td>{user.firstName}</td>
                             <td>{user.lastName}</td>
-                            <td>{user.dob}</td>
+                            <td>{user.dateOfBirth}</td>
                             <td>{user.email}</td>
                             <td>{user.address}</td>
                             <td>{user.phoneNumber}</td>
