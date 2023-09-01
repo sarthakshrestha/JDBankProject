@@ -27,7 +27,7 @@ export default function Login() {
     const data = {
       email: loginState.email - address,
       password: loginState.password,
-      role: "", //add role value here
+      role: "ROLE_USER", //add role value here
     };
 
     axios
@@ -44,18 +44,42 @@ export default function Login() {
     <form className="form" onSubmit={handleSubmit}>
       <div className="forms">
         {fields.map((field) => (
-          <Input
-            key={field.id}
-            handleChange={handleChange}
-            value={loginState[field.id]}
-            labelText={field.labelText}
-            labelFor={field.labelFor}
-            id={field.id}
-            name={field.name}
-            type={field.type}
-            isRequired={field.isRequired}
-            placeholder={field.placeholder}
-          />
+          <div key={field.id} className="form-group">
+            {field.type === "select" ? (
+              <select
+                style={{
+                  height: "30px",
+                  backgroundColor: "#E0DEDD",
+                  borderRadius: "10px",
+                }}
+                id={field.id}
+                name={field.name}
+                value={loginState[field.id]}
+                onChange={handleChange}
+                required={field.isRequired}
+              >
+                <option value="">{field.placeholder}</option>
+                {field.options.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            ) : (
+              <Input
+                key={field.id}
+                handleChange={handleChange}
+                value={loginState[field.id]}
+                labelText={field.labelText}
+                labelFor={field.labelFor}
+                id={field.id}
+                name={field.name}
+                type={field.type}
+                isRequired={field.isRequired}
+                placeholder={field.placeholder}
+              />
+            )}
+          </div>
         ))}
       </div>
 
