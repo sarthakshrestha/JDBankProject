@@ -6,6 +6,9 @@ function AllAgents({ agents }) {
         <div>
             <Sidebar />
             <div className="agent_info_admin">
+                <div className="admin_header">
+                    <h1>All Agents of JDBank</h1>
+                </div>
                 <table>
                     <thead>
                     <tr>

@@ -14,7 +14,7 @@ function viewAllAgents() {
 
     useEffect(() => {
         // Define your API URL
-        const apiUrl = "http://localhost:8080/user";
+        const apiUrl = "http://localhost:8080/agent";
 
         // Make an HTTP GET request to fetch user data
         axios.get(apiUrl)
