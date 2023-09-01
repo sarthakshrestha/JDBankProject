@@ -78,7 +78,7 @@ function Registration() {
                 password: password,
                 address: address,
                 phoneNumber: phoneNumber,
-                dateOfBrith: dob,
+                dateOfBirth: dob,
                 account: {balance: "1000"},
             };
 
