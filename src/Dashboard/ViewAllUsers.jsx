@@ -4,8 +4,9 @@ import Sidebar from "./Components/Sidebar/Sidebar.jsx";
 import AllUsersTable from "./Components/ViewUsers/UserTable.jsx";
 import DashboardData from "./Components/DashboardData/DashboardData.jsx";
 import {Outlet, Route, Routes} from "react-router-dom";
+import AllUsers from "./Components/ViewUsers/AllUsers.jsx";
 
-function AdminDashboard() {
+function viewAllUsers() {
     const [showAllUsersTable, setShowAllUsersTable] = useState(false);
 
     const users = [
@@ -14,6 +15,7 @@ function AdminDashboard() {
         { id: 3, firstName: "Alice", lastName: "Johnson", email: "alice.johnson@example.com", address: "789 Oak St, City, Country", phoneNumber: "555-123-4567", dob: "DD/MM/YYYY" },
         { id: 4, firstName: "Bob", lastName: "Brown", email: "bob.brown@example.com", address: "456 Birch St, City, Country", phoneNumber: "555-555-5555", dob: "DD/MM/YYYY" },
         { id: 5, firstName: "Eva", lastName: "Evans", email: "eva.evans@example.com", address: "111 Pine St, City, Country", phoneNumber: "777-777-7777", dob: "DD/MM/YYYY" },
+        { id: 5, firstName: "Sheva", lastName: "Evans", email: "eva.evans@example.com", address: "111 Pine St, City, Country", phoneNumber: "777-777-7777", dob: "DD/MM/YYYY" }
     ];
 
     const agents = [
@@ -27,13 +29,10 @@ function AdminDashboard() {
     return (
         <div>
             <Sidebar /> {/* Include the Sidebar component */}
-            <DashboardData
-                users={users}
-                agents={agents}
-            />
+            <AllUsers users={users}/>
             <Outlet/>
         </div>
     );
 }
 
-export default AdminDashboard;
+export default viewAllUsers;

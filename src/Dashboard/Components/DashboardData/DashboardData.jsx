@@ -1,7 +1,8 @@
 import React from "react";
 import AllUsersTable from "../ViewUsers/UserTable.jsx";
+import { Outlet } from "react-router-dom";
 
-export default function DashboardData({ showAllUsersTable, users, agents }) {
+export default function DashboardData({ users, agents }) {
     return (
         <div className="admin_dashboard">
             <div className="admin_header">
@@ -10,38 +11,34 @@ export default function DashboardData({ showAllUsersTable, users, agents }) {
             <div className="admin_header_message">
                 <h2>Recently Joined Users</h2>
             </div>
-            {showAllUsersTable ? (
-                <AllUsersTable users={users} />
-            ) : (
-                <div className="user_info_admin">
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Date of Birth</th>
-                            <th>Email</th>
-                            <th>Address</th>
-                            <th>Phone Number</th>
+            <div className="user_info_admin">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Date of Birth</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {users.slice(0,5).map((user) => (
+                        <tr key={user.id}>
+                            <td>{user.id}</td>
+                            <td>{user.firstName}</td>
+                            <td>{user.lastName}</td>
+                            <td>{user.dob}</td>
+                            <td>{user.email}</td>
+                            <td>{user.address}</td>
+                            <td>{user.phoneNumber}</td>
                         </tr>
-                        </thead>
-                        <tbody>
-                        {users.slice(0, 5).map((user) => (
-                            <tr key={user.id}>
-                                <td>{user.id}</td>
-                                <td>{user.firstName}</td>
-                                <td>{user.lastName}</td>
-                                <td>{user.dob}</td>
-                                <td>{user.email}</td>
-                                <td>{user.address}</td>
-                                <td>{user.phoneNumber}</td>
-                            </tr>
-                        ))}
-                        </tbody>
-                    </table>
-                </div>
-            )}
+                    ))}
+                    </tbody>
+                </table>
+            </div>
             <br />
             {/* Table for Recently Joined Agents */}
             <div className="recently_joined_agents">
@@ -59,7 +56,7 @@ export default function DashboardData({ showAllUsersTable, users, agents }) {
                     </tr>
                     </thead>
                     <tbody>
-                    {agents.slice(0, 5).map((agent) => (
+                    {agents.map((agent) => (
                         <tr key={agent.id}>
                             <td>{agent.id}</td>
                             <td>{agent.firstName}</td>
@@ -73,6 +70,7 @@ export default function DashboardData({ showAllUsersTable, users, agents }) {
                     </tbody>
                 </table>
             </div>
+            <Outlet />
         </div>
     );
 }
