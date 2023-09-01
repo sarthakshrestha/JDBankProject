@@ -27,7 +27,7 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/agents">
+                    <Link to="/Admin/Agents">
                         <i className="fas fa-user-tie"></i> View Agents
                     </Link>
                 </li>
