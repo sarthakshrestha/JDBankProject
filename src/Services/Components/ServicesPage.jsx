@@ -44,7 +44,7 @@ export default function ServicesPage() {
                         <img src={InsurancePicture} alt="Image"/>
                     </div>
                     <div className="about-description">
-                        <h2>Insurance Services:</h2>
+                        <h2>Insurance Services</h2>
                         <p>
                             Your peace of mind matters. JD Bank offers insurance plans to protect what's important. Our
                             coverage includes health, life, and property, providing security against the unexpected.
