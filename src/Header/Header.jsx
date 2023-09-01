@@ -63,7 +63,7 @@ export default function Header() {
               <NavLink to="/AboutUsPage">About Us</NavLink>
             </li>
             <li>
-              <NavLink to="/CustomerSupport">Customer Support</NavLink>
+              <NavLink to="/FAQ">FAQ</NavLink>
             </li>
           </ul>
 

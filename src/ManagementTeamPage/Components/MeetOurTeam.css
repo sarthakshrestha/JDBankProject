@@ -1,17 +1,17 @@
 body {
-  padding-top: 100px;
   margin: 0;
   align-content: center;
   align-items: center;
   justify-content: center;
+  padding: 100px 0px 0px 0px;
 }
 
 .team-page .header-container{
-  width: 115%;
+  width: 99vw;
 }
 
 .team-page .footer-container{
-  width: 115%;
+  width: 99vw;
 }
 
 .team-page {

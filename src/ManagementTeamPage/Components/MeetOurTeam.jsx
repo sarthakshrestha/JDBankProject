@@ -11,6 +11,16 @@ import Profile7 from "../profile/profile 8.png";
 import "./MeetOurTeam.css";
 import Header from "../../Header/Header.jsx";
 import Footer from "../../Footer/Footer.jsx";
+import styles from 'styled-components';
+
+// const BodyStyles = styled.div`
+//   margin: 0;
+//   display: flex;
+//   align-content: center;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 100px 0 0;
+// `;
 
 export default function MeetOurTeam() {
     return (

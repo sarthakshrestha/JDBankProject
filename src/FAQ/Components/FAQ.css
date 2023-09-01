@@ -1,0 +1,71 @@
+
+:root {
+    --primary-color: #425aab;
+}
+
+.faq-page {
+    margin: 20px;
+    padding: 20px;
+    background-color: #425aab;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 650px;
+    align-content: center;
+    position: relative;
+    margin-bottom: 10%;
+    margin-left: 30%;
+}
+
+/* Style for the FAQ header */
+.faq-header {
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.header-container{
+    width: 99vw;
+}
+
+.footer-container{
+    width: 99vw;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 19px;
+}
+
+.faq-question.open {
+    background-color: #6a87d1;
+    color: #fff;
+}
+
+.faq-icon {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.faq-answer {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+}

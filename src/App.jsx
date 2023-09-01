@@ -9,6 +9,12 @@ import LoginPageNewVersion from "./LoginPage/LoginPageNewVersion";
 import Registration from "./Registration/Components/Registration.jsx"
 import ServicesPage from "./Services/Components/ServicesPage.jsx";
 import ServiceMain from "./Services/ServiceMain.jsx";
+import FAQMain from "./FAQ/FAQMain.jsx";
+import Sidebar from "./Dashboard/Components/Sidebar/Sidebar.jsx";
+import AdminDashboard from "./Dashboard/Dashboard.jsx";
+import UserTable from "./Dashboard/Components/ViewUsers/UserTable.jsx";
+// import ShowAdmin from "./DashBoards/AdminDashboard/ShowAdmin.jsx";
+// import ShowDashBoard from "./DashBoards/UserDashboard/ShowDashBoard.jsx";
 // import Dashboard from "./AdminDashboard/Components/Dashboard.jsx";
 // import RootAdmin from "./Layouts/RootAdmin.jsx";
 // import ShowAdmin from "./AdminDashboard/Components/ShowAdmin.jsx";
@@ -41,6 +47,12 @@ export default function App() {
                     <Route path="*" element={<h1>PageNotFound!</h1>}/>
 
                     <Route path="/Services" element={<ServiceMain/>}/>
+
+                    <Route path="/FAQ" element={<FAQMain/>}/>
+
+                    <Route path="/Admin" element={<AdminDashboard/>}>
+                        <Route path="/Admin/Users" element={<UserTable/>}/>
+                    </Route>
 
                 </Routes>
             </>
