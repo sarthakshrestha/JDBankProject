@@ -35,12 +35,16 @@
     width: 100%;
     max-width: 500px; /* Increase the maximum width */
     margin-right: 20px;
+    top: -40px;
+    position: relative;
 }
 
 .edit_section {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 5px;
+    width: 400px;
+    margin-left: 90px;
 }
 
 .edit_section h3 {
@@ -83,13 +87,13 @@ input[type="date"] {
 }
 
 .save_change {
-    background-color: palevioletred;
+    background-color: #28a745;
     color: #fff;
     margin-right: 10px;
 }
 
 .discard_change {
-    background-color: #28a745;
+    background-color: palevioletred;
     color: #fff;
     margin-right: 10px;
 }
@@ -105,9 +109,10 @@ input[type="date"] {
 
 .image_change img {
     max-width: 100%;
-    height: auto;
     border-radius: 50%;
     margin-bottom: 10px;
+    height: 250px;
+    width: auto;
 }
 
 .image_change h2 {
