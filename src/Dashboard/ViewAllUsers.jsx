@@ -1,24 +1,22 @@
 import React, {useEffect, useState} from "react";
+import axios from "axios";
 import "./Styles/Dashboard.css";
 import Sidebar from "./Components/Sidebar/Sidebar.jsx";
 import AllUsersTable from "./Components/ViewUsers/UserTable.jsx";
-import DashboardData from "./Components/DashboardData/DashboardData.jsx";
-import {Outlet, Route, Routes} from "react-router-dom";
-import AllUsers from "./Components/ViewUsers/AllUsers.jsx";
-import axios from "axios";
+import {Outlet} from "react-router-dom";
 
-function viewAllUsers() {
+function ViewAllUsers() {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Define your API URL
         const apiUrl = "http://localhost:8080/user";
 
-        // Make an HTTP GET request to fetch user data
-        axios.get(apiUrl)
+        // Fetch data using Axios with promises
+        axios
+            .get(apiUrl)
             .then((response) => {
-                setUsers(response.data); // Assuming the API returns an array of user data
+                setUsers(response.data);
                 setLoading(false);
             })
             .catch((error) => {
@@ -27,13 +25,31 @@ function viewAllUsers() {
             });
     }, []);
 
+    const deleteUser = (id) => {
+        const deleteUrl = `http://localhost:8080/user/${id}`;
+
+        // Handle the delete request using promises
+        axios
+            .delete(deleteUrl)
+            .then((response) => {
+                if (response.status === 204) {
+                    // Update the user list to remove the deleted user
+                    const updatedUsers = users.filter((user) => user.user_id !== id);
+                    setUsers(updatedUsers);
+                }
+            })
+            .catch((error) => {
+                console.error("Error deleting user:", error);
+            });
+    };
+
     return (
         <div>
-            <Sidebar /> {/* Include the Sidebar component */}
-            <AllUsers users={users}/>
+            <Sidebar/>
+            <AllUsersTable users={users} deleteUser={deleteUser}/>
             <Outlet/>
         </div>
     );
 }
 
-export default viewAllUsers;
+export default ViewAllUsers;

@@ -45,22 +45,18 @@ function FAQPage() {
         },
     ];
 
-    return (<div className="full=-page">
-            <div class="header-container">
-                <Header/>
-            </div>
-            <div className="faq-page">
-                <div className="faq-header">Frequently Asked Questions</div>
-                <div className="faq-content">
-                    {faqData.map((item, index) => (
-                        <FAQItem key={index} question={item.question} answer={item.answer}/>
-                    ))}
+    return (<>
+            <Header/>
+                <div className="faq-page">
+                    <div className="faq-header">Frequently Asked Questions</div>
+                    <div className="faq-content">
+                        {faqData.map((item, index) => (
+                            <FAQItem key={index} question={item.question} answer={item.answer}/>
+                        ))}
+                    </div>
                 </div>
-            </div>
-            <div className="footer-container">
-                <Footer/>
-            </div>
-        </div>
+            <Footer/>
+        </>
     );
 }
 

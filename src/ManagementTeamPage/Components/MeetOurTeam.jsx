@@ -23,11 +23,9 @@ import styles from 'styled-components';
 // `;
 
 export default function MeetOurTeam() {
-    return (
+    return (<>
+        <Header/>
         <div className="team-page">
-            <div className="header-container">
-                <Header/>
-            </div>
             <div className="team-container">
                 <h1 className="team-heading">Meet Our Team</h1>
                 <div className="top-row">
@@ -70,9 +68,7 @@ export default function MeetOurTeam() {
                     </div>
                 </div>
             </div>
-            <div className="footer-container">
-                <Footer/>
-            </div>
         </div>
-    );
+        <Footer/>
+    </>);
 }

@@ -6,21 +6,12 @@ body {
   padding: 100px 0px 0px 0px;
 }
 
-.team-page .header-container{
-  width: 100vw;
-}
-
-.team-page .footer-container{
-  width: 99vw;
-}
-
 .team-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0px;
   background-color: white;
-  width: 100%;
 }
 
 .team-container {

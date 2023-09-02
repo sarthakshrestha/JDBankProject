@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Header from "../Header/Header.jsx";
 import LandingPage from "./LandingPage.jsx";
 import Footer from "../Footer/Footer.jsx";
+import "./LandingPage.css";
 
 export default function Homepage() {
     return (

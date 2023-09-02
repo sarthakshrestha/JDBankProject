@@ -14,7 +14,7 @@
     width: 30%;
     height: 100%;
     position: relative;
-    padding-top: 3%;
+    padding-top: 2%;
 
     color: white;
     font-size: 32px;
@@ -24,6 +24,7 @@
 .footerLeft img {
     width: 180px;
     height: 180px;
+
 }
 
 .footerRight {
