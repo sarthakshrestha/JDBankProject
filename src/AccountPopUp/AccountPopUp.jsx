@@ -15,7 +15,7 @@ export default function AccountPopUp() {
 
   function logoutHandle() {
     localStorage.setItem("UserToken", JSON.stringify(""));
-    localStorage.setItem("UserData", JSON.stringify(""));
+    localStorage.setItem("UserData", JSON.stringify({}));
     navTo("/");
   }
 
