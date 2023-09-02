@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer.jsx";
 export default function Homepage() {
     return (
         <>
-            <Header />
+            <Header/>
             <LandingPage />
             <Footer />
         </>

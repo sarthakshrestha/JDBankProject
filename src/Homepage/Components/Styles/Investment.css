@@ -1,72 +1,94 @@
 .investment {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
-  padding: 50px;
+    padding: 50px;
 }
 
 .investment h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: bold;
-  font-size: 72px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 72px;
 }
 
 .investment p {
-  text-align: center;
-  font-size: 18px;
-  margin-top: 0;
-  padding: 0 50px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 0;
+    padding: 0 50px;
 }
 
 .box-container {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  gap: 90px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 90px;
 }
 
 .investment-box {
-  width: 270px;
-  height: 370px;
-  background-color: #ffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.box-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+    width: 270px;
+    height: 370px;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.box-content h3{
-  text-align: center;
+.box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.box-content h3 {
+    text-align: center;
 }
 
 .icon {
-  width: 100px;
-  height: 100px;
+    width: 100px;
+    height: 100px;
 }
+
 h3 {
-  margin-top: 10px;
-  padding: 20px;
+    margin-top: 10px;
+    padding: 20px;
 }
 
 .view-more-button {
-  margin-top: 5px;
-  color: white;
-  background-color: #425aab;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    margin-top: 5px;
+    color: white;
+    background-color: #425aab;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .view-more-button:hover {
-  background-color: #324a78;
+    background-color: #324a78;
 }
+
+/* ... (Your existing CSS code) ... */
+
+.ok-button {
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #34af54; /* Green color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.ok-button:hover {
+    background-color: #2e9e4b; /* A slightly darker green for hover state */
+}
+
+/* ... (Your existing CSS code) ... */
+
