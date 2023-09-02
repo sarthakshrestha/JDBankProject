@@ -1,60 +1,60 @@
 /* Dashboard.css */
 .admin_dashboard {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    margin-top: -10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  margin-top: -10%;
 }
 
 .admin_header {
-    font-size: 32px;
-    margin-bottom: 10px;
-    margin-right: 100px;
-    color: black;
+  font-size: 32px;
+  margin-bottom: 10px;
+  margin-right: 100px;
+  color: black;
 }
 
 .admin_header_message h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    display: flex;
-    margin-right: 200px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  display: flex;
+  margin-right: 200px;
 }
 
 .user_info_admin {
-    width: 100%;
-    background-color: gainsboro;
+  width: 100%;
+  background-color: gainsboro;
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 th,
 td {
-    border: 1px solid black;
-    padding: 12px;
-    text-align: center;
+  border: 1px solid black;
+  padding: 12px;
+  text-align: center;
 }
 
 th {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .btn_update {
-    background-color: seagreen;
-    color: white;
-    padding: 6px 12px;
-    cursor: pointer;
+  background-color: seagreen;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
 }
 
 .btn_delete {
-    background-color: indianred;
-    color: white;
-    padding: 6px 12px;
-    cursor: pointer;
+  background-color: indianred;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
 }

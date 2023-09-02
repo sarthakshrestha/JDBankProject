@@ -8,12 +8,15 @@ import AboutUsPage from "./AboutUspage/AboutUsPage";
 import RegistrationPage from "./Registration/RegistrationPage";
 import LoginPageNewVersion from "./LoginPage/LoginPageNewVersion";
 import LoginPage from "./Login/pages/LoginPage";
+import AccountPopUp from "./AccountPopUp/AccountPopUp";
 import FAQMain from "./FAQ/FAQMain.jsx";
 import AdminDashboard from "./Dashboard/Dashboard.jsx";
 import ViewAllUsers from "./Dashboard/ViewAllUsers.jsx";
 import ViewAllAgents from "./Dashboard/ViewAllAgents.jsx";
 import ViewAllPlans from "./Dashboard/ViewAllPlans.jsx";
-import AccountPopUp from "./AccountPopUp/AccountPopUp";
+import UserDashboard from "./UserDashboard/DashboardUser/UserDashboard.jsx";
+import EditProfile from "./UserDashboard/EditProfile/EditProfile.jsx";
+import Transaction from "./UserDashboard/Transaction/Transaction.jsx";
 
 export default function App() {
   return (
@@ -94,13 +97,13 @@ export default function App() {
             />
           </Route>
 
-          <Route path="/Admin" element={<AdminDashboard />}>
-            {/*<Route path="/AllUsers" element={<AllUsers users={users} />} />*/}
-            {/*<Route path="/Users" element={<AllUsersData/>} />*/}
-          </Route>
+          <Route path="/Admin" element={<AdminDashboard />} />
           <Route path="/Admin/Users" element={<ViewAllUsers />} />
           <Route path="/Admin/Agents" element={<ViewAllAgents />} />
           <Route path="/Admin/Plans" element={<ViewAllPlans />} />
+          <Route path="/User" element={<UserDashboard />} />
+          <Route path="/User/Edit" element={<EditProfile />} />
+          <Route path="/User/Transaction" element={<Transaction />} />
 
           <Route path="*" element={<h1>PageNotFound! :(</h1>} />
         </Routes>

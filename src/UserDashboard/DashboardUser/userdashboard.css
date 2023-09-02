@@ -1,0 +1,77 @@
+
+
+.dashboard {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  max-width: 900px; /* Increase the width here */
+  width: 55vw;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+#user-name {
+  color: #27ae60;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.balance {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+  width: 390px;
+
+}
+
+.balance h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+#balance-amount {
+  font-size: 48px;
+  color: #27ae60;
+  margin-top: 10px;
+}
+
+.user-details {
+  flex-grow: 1;
+}
+
+.user-id,
+.user-fullname,
+.user-email,
+.user-phone,
+.user-address {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  display: block;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Add more CSS styling as needed for further customization */

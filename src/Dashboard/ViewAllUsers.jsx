@@ -1,39 +1,53 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./Styles/Dashboard.css";
 import Sidebar from "./Components/Sidebar/Sidebar.jsx";
 import AllUsersTable from "./Components/ViewUsers/UserTable.jsx";
-import DashboardData from "./Components/DashboardData/DashboardData.jsx";
-import {Outlet, Route, Routes} from "react-router-dom";
-import AllUsers from "./Components/ViewUsers/AllUsers.jsx";
-import axios from "axios";
+import { Outlet } from "react-router-dom";
 
-function viewAllUsers() {
-    const [users, setUsers] = useState([]);
-    const [loading, setLoading] = useState(true);
+function ViewAllUsers() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        // Define your API URL
-        const apiUrl = "http://localhost:8080/user";
+  useEffect(() => {
+    const apiUrl = "http://localhost:8080/user";
 
-        // Make an HTTP GET request to fetch user data
-        axios.get(apiUrl)
-            .then((response) => {
-                setUsers(response.data); // Assuming the API returns an array of user data
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.error("Error fetching data from the API:", error);
-                setLoading(false);
-            });
-    }, []);
+    axios
+      .get(apiUrl)
+      .then((response) => {
+        setUsers(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data from the API:", error);
+        setLoading(false);
+      });
+  }, []);
 
-    return (
-        <div>
-            <Sidebar /> {/* Include the Sidebar component */}
-            <AllUsers users={users}/>
-            <Outlet/>
-        </div>
-    );
+  const deleteUser = (id) => {
+    const deleteUrl = `http://localhost:8080/user/${id}`;
+
+    axios
+      .delete(deleteUrl)
+      .then((response) => {
+        if (response.status === 204) {
+          // Updates the user list to remove the deleted user
+          const updatedUsers = users.filter((user) => user.user_id !== id);
+          setUsers(updatedUsers);
+        }
+      })
+      .catch((error) => {
+        console.error("Error deleting user:", error);
+      });
+  };
+
+  return (
+    <div>
+      <Sidebar />
+      <AllUsersTable users={users} deleteUser={deleteUser} />
+      <Outlet />
+    </div>
+  );
 }
 
-export default viewAllUsers;
+export default ViewAllUsers;
