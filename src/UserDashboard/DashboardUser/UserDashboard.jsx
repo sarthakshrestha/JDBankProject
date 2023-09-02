@@ -8,7 +8,7 @@ function UserDashboard() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const apiUrl = "http://localhost:8080/user/1"; // Replace with your API endpoint
+        const apiUrl = "http://localhost:8080/user/2"; // Replace with your API endpoint
 
         axios
             .get(apiUrl)
