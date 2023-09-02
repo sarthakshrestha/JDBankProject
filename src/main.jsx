@@ -14,7 +14,7 @@ localStorage.setItem("UserData", JSON.stringify({}));
 axios.interceptors.request.use((request) => {
   const localStorageBT_Value = JSON.parse(localStorage.getItem("UserToken"));
 
-  request.headers["Authorization"] = "Bearer" + localStorageBT_Value;
+  request.headers["Authorization"] = "Bearer " + localStorageBT_Value;
   return request;
 });
 
