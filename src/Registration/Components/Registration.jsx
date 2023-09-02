@@ -69,6 +69,7 @@ function Registration() {
     return Object.keys(newErrors).length === 0;
   };
 
+  const navTo = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validateForm()) {
@@ -88,7 +89,7 @@ function Registration() {
       //   .post("http://localhost:8080/home/register", registerData)
       //   .then((res) => console.log(res))
       //   .catch((err) => console.log(err));
-      const navTo = useNavigate();
+
       axios
         .post("http://localhost:8080/home/register", registerData)
         .then((response) => {
