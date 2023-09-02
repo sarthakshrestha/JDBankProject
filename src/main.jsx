@@ -5,9 +5,13 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import axios from "axios";
 
-//initial localStorage value set to empty string
-// localStorage.setItem("UserToken", JSON.stringify(""));
-// localStorage.setItem("UserData", JSON.stringify(""));
+//initial localStorage value set to empty string if null
+const token = JSON.parse(localStorage.getItem("UserToken"));
+const data = JSON.parse(localStorage.getItem("UserData"));
+if (token == null || data == null) {
+  localStorage.setItem("UserToken", JSON.stringify(""));
+  localStorage.setItem("UserData", JSON.stringify(""));
+}
 
 //axios request interceptor
 axios.interceptors.request.use((request) => {
