@@ -3,7 +3,7 @@ import "./Register.css";
 // import { FaUser, FaLock } from "react-icons/fa6";
 // import {FaEnvelope, FaCalendarAlt, FaPhoneAlt} from "react-icons/fa";
 // import {FaLocationDot} from "react-icons/fa6";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Header from "../../Header/Header.jsx";
 import Footer from "../../Footer/Footer.jsx";
 import axios from "axios";
@@ -88,6 +88,7 @@ function Registration() {
       //   .post("http://localhost:8080/home/register", registerData)
       //   .then((res) => console.log(res))
       //   .catch((err) => console.log(err));
+      const navTo = useNavigate();
       axios
         .post("http://localhost:8080/home/register", registerData)
         .then((response) => {
