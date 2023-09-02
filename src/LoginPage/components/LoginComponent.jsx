@@ -62,9 +62,6 @@ export default function LoginComponent() {
             placeholder="password"
             ref={passwordRef}
           />
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-            Forgot Password?
-          </a>
         </div>
 
         <div className="roleDiv">
@@ -76,12 +73,12 @@ export default function LoginComponent() {
         </div>
 
         <button className="logInButton" onClick={loginHandle}>
-          Log in
+          Log In
         </button>
 
-        <NavLink className="RegisterLink" to="/Registration">
-          Register
-        </NavLink>
+        <button className="SignUpButton" onClick={() => navTo("/Registration")}>
+          Sign Up
+        </button>
       </div>
     </>
   );

@@ -77,14 +77,15 @@
 
 .roleDiv {
   position: relative;
-  right: 95px;
+  right: 78px;
   bottom: 0px;
 }
 
 .logInButton {
+  width: 92px;
   position: relative;
   top: 15px;
-  left: -85px;
+  left: -5px;
 
   padding: 10px 20px;
 
@@ -111,11 +112,34 @@
   outline: none;
 }
 
-.RegisterLink {
-  position: absolute;
+.SignUpButton {
+  position: relative;
+  top: 15px;
+  left: -5px;
 
-  bottom: 18px;
-  left: 42%;
+  margin-left: 10px;
 
-  font-size: 14px;
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 50px;
+
+  background-color: #425aab;
+
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.4s ease;
+}
+
+.SignUpButton:hover {
+  /* background-color: black; */
+  background-color: #31407d;
+}
+
+.SignUpButton:focus {
+  outline: none;
 }
