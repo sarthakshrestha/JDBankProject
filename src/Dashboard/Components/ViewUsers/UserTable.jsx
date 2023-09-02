@@ -40,6 +40,9 @@ function UserTable() {
     return (
         <div>
             <Sidebar/>
+            <div className="admin_header">
+                <h1>All Users of JD Bank</h1>
+            </div>
             <div className="user_info_admin">
                 <table>
                     <thead>

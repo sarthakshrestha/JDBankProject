@@ -9,7 +9,7 @@ function AllUsers({users, deleteUser}) {
             <Sidebar/>
             <div className="admin_dashboard">
                 <div className="admin_header">
-                    <h1>All Registered Users of JDBank</h1>
+                    <h1>All Users Registered to JDBank</h1>
                 </div>
                 <AllUsersTable users={users} deleteUser={deleteUser}/>
             </div>

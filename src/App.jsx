@@ -20,6 +20,8 @@ import ViewAllPlans from "./Dashboard/ViewAllPlans.jsx";
 import UserDashboard from "./UserDashboard/DashboardUser/UserDashboard.jsx";
 import EditProfile from "./UserDashboard/EditProfile/EditProfile.jsx";
 import Transaction from "./UserDashboard/Transaction/Transaction.jsx";
+import AgentViewUser from "./AgentDashboard/AgentViewUser/AgentViewUser.jsx";
+import DepositWithdraw from "./AgentDashboard/DepositWithdraw/DepositWithdraw.jsx";
 // import ShowAdmin from "./DashBoards/AdminDashboard/ShowAdmin.jsx";
 // import ShowDashBoard from "./DashBoards/UserDashboard/ShowDashBoard.jsx";
 // import Dashboard from "./AdminDashboard/Components/Dashboard.jsx";
@@ -58,6 +60,10 @@ export default function App() {
                     <Route path="/Services" element={<ServiceMain/>}/>
 
                     <Route path="/FAQ" element={<FAQMain/>}/>
+
+                    <Route path="/Agent" element={<AgentViewUser/>}/>
+
+                    <Route path="/Agent/DepositOrWithdraw" element={<DepositWithdraw/>}/>
 
                     <Route path ="/Admin/Users" element={<ViewAllUsers/>}/>
 
