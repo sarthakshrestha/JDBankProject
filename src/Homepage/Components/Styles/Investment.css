@@ -44,7 +44,7 @@
   height: 100%;
 }
 
-.box-content h3{
+.box-content h3 {
   text-align: center;
 }
 
@@ -58,6 +58,20 @@ h3 {
 }
 
 .view-more-button {
+  margin-top: 5px;
+  color: white;
+  background-color: #425aab;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-more-button:hover {
+  background-color: #324a78;
+}
+
+.view-more-button-stocks {
   margin-top: 5px;
   color: white;
   background-color: #425aab;

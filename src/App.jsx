@@ -1,7 +1,6 @@
 import "./App.css";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-
 import LandingPage from "./Homepage/LandingPage";
 import ServicesMain from "./Services/ServiceMain";
 import MeetOurTeamPage from "./ManagmentTeamPage/MeetOurTeamPage";

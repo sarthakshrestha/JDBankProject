@@ -29,7 +29,7 @@ function FAQPage() {
     {
       question:
         "What is the minimum amount to deposit for a customer of JDBank",
-      answer: "Rs. 10000",
+      answer: "Rs. 1000",
     },
     {
       question: "What are the benefits of JDBank's savings account?",
