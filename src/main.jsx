@@ -7,7 +7,7 @@ import axios from "axios";
 
 //initial localStorage value set to empty string
 // localStorage.setItem("UserToken", JSON.stringify(""));
-// localStorage.setItem("UserData", JSON.stringify({}));
+// localStorage.setItem("UserData", JSON.stringify(""));
 
 //axios request interceptor
 axios.interceptors.request.use((request) => {

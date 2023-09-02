@@ -27,7 +27,8 @@ export default function LoginComponent() {
       })
       .then(() => {
         if (roleRef.current.value == "ROLE_USER") {
-          navTo("/UserDashboard");
+          // navTo("/User");
+          navTo("/");
         } else if (roleRef.current.value == "ROLE_ADMIN") {
           navTo("/Admin");
         } else if (roleRef.current.value == "ROLE_AGENT") {
