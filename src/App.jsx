@@ -14,6 +14,7 @@ import ViewAllUsers from "./Dashboard/ViewAllUsers.jsx";
 import ViewAllAgents from "./Dashboard/ViewAllAgents.jsx";
 import ViewAllPlans from "./Dashboard/ViewAllPlans.jsx";
 import Homepage from "./Homepage/Homepage";
+import AccountPopUp from "./AccountPopUp/AccountPopUp";
 
 export default function App() {
   return (
@@ -21,24 +22,58 @@ export default function App() {
       <>
         <Routes>
           <Route path="/" element={<Homepage />}>
-            <Route path="/Login" element={<LoginPageNewVersion />} />
+            <Route
+              path="/Login"
+              element={
+                JSON.parse(localStorage.getItem("UserToken")) != "" &&
+                JSON.parse(localStorage.getItem("UserData")) != "" ? (
+                  <AccountPopUp />
+                ) : (
+                  <LoginPageNewVersion />
+                )
+              }
+            />
           </Route>
 
           <Route path="/Services" element={<ServicesMain />}>
-            <Route path="/Services/Login" element={<LoginPageNewVersion />} />
+            <Route
+              path="/Services/Login"
+              element={
+                JSON.parse(localStorage.getItem("UserToken")) != "" &&
+                JSON.parse(localStorage.getItem("UserData")) != "" ? (
+                  <AccountPopUp />
+                ) : (
+                  <LoginPageNewVersion />
+                )
+              }
+            />
           </Route>
 
           <Route path="/ManagementTeam" element={<MeetOurTeamPage />}>
             <Route
               path="/ManagementTeam/Login"
-              element={<LoginPageNewVersion />}
+              element={
+                JSON.parse(localStorage.getItem("UserToken")) != "" &&
+                JSON.parse(localStorage.getItem("UserData")) != "" ? (
+                  <AccountPopUp />
+                ) : (
+                  <LoginPageNewVersion />
+                )
+              }
             />
           </Route>
 
           <Route path="/AboutUsPage" element={<AboutUsPage />}>
             <Route
               path="/AboutUsPage/Login"
-              element={<LoginPageNewVersion />}
+              element={
+                JSON.parse(localStorage.getItem("UserToken")) != "" &&
+                JSON.parse(localStorage.getItem("UserData")) != "" ? (
+                  <AccountPopUp />
+                ) : (
+                  <LoginPageNewVersion />
+                )
+              }
             />
           </Route>
 
@@ -46,7 +81,19 @@ export default function App() {
 
           <Route path="/LoginDefault" element={<LoginPage />} />
 
-          <Route path="/FAQ" element={<FAQMain />} />
+          <Route path="/FAQ" element={<FAQMain />}>
+            <Route
+              path="/FAQ/Login"
+              element={
+                JSON.parse(localStorage.getItem("UserToken")) != "" &&
+                JSON.parse(localStorage.getItem("UserData")) != "" ? (
+                  <AccountPopUp />
+                ) : (
+                  <LoginPageNewVersion />
+                )
+              }
+            />
+          </Route>
 
           <Route path="/Admin" element={<AdminDashboard />}>
             {/*<Route path="/AllUsers" element={<AllUsers users={users} />} />*/}
