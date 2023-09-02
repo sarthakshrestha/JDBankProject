@@ -81,7 +81,19 @@ export default function App() {
             />
           </Route>
 
-          <Route path="/Registration" element={<RegistrationPage />} />
+          <Route path="/Registration" element={<RegistrationPage />}>
+            <Route
+              path="/Registration/Login"
+              element={
+                JSON.parse(localStorage.getItem("UserToken")) != "" &&
+                JSON.parse(localStorage.getItem("UserData")) != "" ? (
+                  <AccountPopUp />
+                ) : (
+                  <LoginPageNewVersion />
+                )
+              }
+            />
+          </Route>
 
           <Route path="/LoginDefault" element={<LoginPage />} />
 
