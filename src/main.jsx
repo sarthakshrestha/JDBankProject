@@ -6,11 +6,13 @@ import { BrowserRouter } from "react-router-dom";
 import axios from "axios";
 
 //initial localStorage value set to empty string
-localStorage.setItem("BearerToken", JSON.stringify(""));
+localStorage.setItem("BearerData", JSON.stringify({}));
 
 //axios request interceptor
 axios.interceptors.request.use((request) => {
-  const localStorageBT_Value = JSON.parse(localStorage.getItem("BearerToken"));
+  const localStorageBT_Value = JSON.parse(
+    localStorage.getItem("BearerData")
+  ).accessToken;
   request.headers["Authorization"] = "Bearer" + localStorageBT_Value;
   return request;
 });

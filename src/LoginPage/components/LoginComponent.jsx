@@ -1,6 +1,7 @@
 import axios from "axios";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import "./LoginComponent.css";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginComponent() {
   let emailRef = useRef("");
@@ -17,7 +18,18 @@ export default function LoginComponent() {
     axios
       .post("http://localhost:8080/home/login", data)
       .then((response) => {
-        console.log(response);
+        localStorage.setItem("BearerData", JSON.stringify(response.data));
+      })
+      .then(() => {
+        const navTo = useNavigate();
+
+        if (roleRef.current.value == "ROLE_USER") {
+          navTo("/UserDashboard");
+        } else if (roleRef.current.value == "ROLE_ADMIN") {
+          navTo("/Admin");
+        } else if (roleRef.current.value == "ROLE_AGENT") {
+          navTo("/Agent");
+        }
       })
       .catch((error) => {
         console.error(error);
