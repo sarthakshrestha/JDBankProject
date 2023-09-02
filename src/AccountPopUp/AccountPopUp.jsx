@@ -1,6 +1,5 @@
-import { useNavigate } from "react-router";
 import "./AccountPopUp.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function AccountPopUp() {
   const navTo = useNavigate();
