@@ -5,14 +5,6 @@ import { NavLink } from "react-router-dom";
 export default function AccountPopUp() {
   const navTo = useNavigate();
 
-  //Testing purpose
-  // const data = {
-  //   firstName: "Birajan",
-  //   lastName: "Rajbhandari",
-  //   email: "birajan@gmail.com",
-  // };
-  // localStorage.setItem("UserData", JSON.stringify(data));
-
   function logoutHandle() {
     localStorage.setItem("UserToken", JSON.stringify(""));
     localStorage.setItem("UserData", JSON.stringify(""));
