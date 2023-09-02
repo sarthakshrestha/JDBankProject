@@ -20,7 +20,8 @@
 
 .LoginContainer h4 {
   position: relative;
-  top: 30px;
+  top: 40px;
+  right: 5px;
 }
 
 .LoginContainer p {
@@ -69,20 +70,20 @@
 .passwordDiv a {
   position: absolute;
   right: 60px;
-  bottom: 100px;
+  bottom: 130px;
 
   font-size: 12px;
 }
 
 .roleDiv {
   position: relative;
-  right: 90px;
-  bottom: 24px;
+  right: 95px;
+  bottom: 0px;
 }
 
 .logInButton {
   position: relative;
-  top: -5px;
+  top: 15px;
   left: -85px;
 
   padding: 10px 20px;
@@ -108,4 +109,13 @@
 
 .logInButton:focus {
   outline: none;
+}
+
+.RegisterLink {
+  position: absolute;
+
+  bottom: 18px;
+  left: 42%;
+
+  font-size: 14px;
 }

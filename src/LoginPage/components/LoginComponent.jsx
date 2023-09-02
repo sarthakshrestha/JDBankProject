@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useRef } from "react";
 import "./LoginComponent.css";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function LoginComponent() {
   let emailRef = useRef("");
@@ -68,7 +68,6 @@ export default function LoginComponent() {
         </div>
 
         <div className="roleDiv">
-          <p>Role: </p>
           <select defaultValue="ROLE_USER" ref={roleRef}>
             <option value="ROLE_USER">User</option>
             <option value="ROLE_ADMIN">Admin</option>
@@ -79,6 +78,10 @@ export default function LoginComponent() {
         <button className="logInButton" onClick={loginHandle}>
           Log in
         </button>
+
+        <NavLink className="RegisterLink" to="/Registration">
+          Register
+        </NavLink>
       </div>
     </>
   );

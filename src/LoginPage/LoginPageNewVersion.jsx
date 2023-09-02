@@ -1,4 +1,4 @@
-import LoginComponent from "./components/LoginComponent";
+import LoginComponent from "./Components/LoginComponent";
 
 export default function LoginPageNewVersion() {
   return (

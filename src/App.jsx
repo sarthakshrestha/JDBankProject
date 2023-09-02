@@ -17,6 +17,8 @@ import ViewAllPlans from "./Dashboard/ViewAllPlans.jsx";
 import UserDashboard from "./UserDashboard/DashboardUser/UserDashboard.jsx";
 import EditProfile from "./UserDashboard/EditProfile/EditProfile.jsx";
 import Transaction from "./UserDashboard/Transaction/Transaction.jsx";
+import AgentViewUser from "./AgentDashboard/AgentViewUser/AgentViewUser.jsx";
+import DepositWithdraw from "./AgentDashboard/DepositWithdraw/DepositWithdraw.jsx";
 
 export default function App() {
   return (
@@ -96,6 +98,11 @@ export default function App() {
               }
             />
           </Route>
+          <Route path="/Agent" element={<AgentViewUser />} />
+          <Route
+            path="/Agent/DepositOrWithdraw"
+            element={<DepositWithdraw />}
+          />
 
           <Route path="/Admin" element={<AdminDashboard />} />
           <Route path="/Admin/Users" element={<ViewAllUsers />} />
