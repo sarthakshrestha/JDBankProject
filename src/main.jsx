@@ -7,13 +7,13 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //initial localStorage value set to empty string
-localStorage.setItem("BearerData", JSON.stringify({}));
+localStorage.setItem("UserToken", JSON.stringify(""));
+localStorage.setItem("UserData", JSON.stringify({}));
 
 //axios request interceptor
 axios.interceptors.request.use((request) => {
-  const localStorageBT_Value = JSON.parse(
-    localStorage.getItem("BearerData")
-  ).accessToken;
+  const localStorageBT_Value = JSON.parse(localStorage.getItem("UserToken"));
+
   request.headers["Authorization"] = "Bearer" + localStorageBT_Value;
   return request;
 });

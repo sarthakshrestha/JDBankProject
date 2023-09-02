@@ -19,7 +19,11 @@ export default function LoginComponent() {
     axios
       .post("http://localhost:8080/home/login", data)
       .then((response) => {
-        localStorage.setItem("BearerData", JSON.stringify(response.data));
+        localStorage.setItem(
+          "UserToken",
+          JSON.stringify(response.data.accessToken)
+        );
+        localStorage.setItem("UserData", JSON.stringify(response.data.person));
       })
       .then(() => {
         if (roleRef.current.value == "ROLE_USER") {
