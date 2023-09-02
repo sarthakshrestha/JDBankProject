@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import { Route, Routes, useSearchParams } from "react-router-dom";
-import LandingPage from "./Homepage/LandingPage";
+import LandingPage from "./Homepage/Homepage";
 import ServicesMain from "./Services/ServiceMain";
 import MeetOurTeamPage from "./ManagmentTeamPage/MeetOurTeamPage";
 import AboutUsPage from "./AboutUspage/AboutUsPage";
@@ -13,13 +13,14 @@ import AdminDashboard from "./Dashboard/Dashboard.jsx";
 import ViewAllUsers from "./Dashboard/ViewAllUsers.jsx";
 import ViewAllAgents from "./Dashboard/ViewAllAgents.jsx";
 import ViewAllPlans from "./Dashboard/ViewAllPlans.jsx";
+import Homepage from "./Homepage/Homepage";
 
 export default function App() {
   return (
     <div className="App">
       <>
         <Routes>
-          <Route path="/" element={<LandingPage />}>
+          <Route path="/" element={<Homepage />}>
             <Route path="/Login" element={<LoginPageNewVersion />} />
           </Route>
 

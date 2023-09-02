@@ -84,10 +84,28 @@ function Registration() {
         account: { balance: "1000" },
       };
 
+      // axios
+      //   .post("http://localhost:8080/home/register", registerData)
+      //   .then((res) => console.log(res))
+      //   .catch((err) => console.log(err));
       axios
         .post("http://localhost:8080/home/register", registerData)
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err));
+        .then((response) => {
+          localStorage.setItem(
+            "UserToken",
+            JSON.stringify(response.data.accessToken)
+          );
+          localStorage.setItem(
+            "UserData",
+            JSON.stringify(response.data.person)
+          );
+        })
+        .then(() => {
+          navTo("/UserDashboard");
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     }
   };
   return (

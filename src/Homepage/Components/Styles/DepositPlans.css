@@ -79,3 +79,54 @@
   margin-top: 70px;
   right: 15px;
 }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* Ensure the popup appears above other elements */
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  width: 850px;
+}
+
+/* ... (Your existing CSS code) ... */
+
+.ok-button {
+  font-size: 24px; /* Adjust the font size for the "OK" button */
+  padding: 10px 20px; /* Add padding to the button for better spacing */
+  background-color: #5970e1; /* Background color for the "OK" button */
+  color: #fff; /* Text color for the "OK" button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Add margin to create space between the message and the button */
+  margin-bottom: 30px;
+}
+
+.ok-button:hover {
+  background-color: #34af54; /* Hover color for the "OK" button */
+}
+
+/* ... (Your existing CSS code) ... */
+
+
+/* Customize the popup message text styles */
+.popup-content p {
+  font-size: 24px;
+  margin: 0;
+  padding: 20px;
+}
