@@ -6,10 +6,9 @@ import SideBarAgent from "../SideBarAgent/SideBarAgent";
 function AgentViewUser() {
   const [showForm, setShowForm] = useState(false);
   const [userId, setUserId] = useState("");
-  const [userData, setUserData] = useState([]); // State to store user data as an array
+  const [userData, setUserData] = useState([]);
 
   useEffect(() => {
-    // Make an Axios GET request to fetch the user data when the component mounts
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
@@ -17,7 +16,7 @@ function AgentViewUser() {
             JSON.parse(localStorage.getItem("UserData").agent_id) +
             "/user"
         );
-        // Handle the response and set the user data state
+
         console.log("User data fetched successfully:", response.data);
         setUserData(response.data);
       } catch (error) {
@@ -26,7 +25,7 @@ function AgentViewUser() {
     };
 
     fetchUserData();
-  }, []); // Empty dependency array to run the effect only once
+  }, []);
 
   const openForm = () => {
     setShowForm(true);
@@ -39,7 +38,6 @@ function AgentViewUser() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Make an Axios POST request to add the user to the agent's table
       const response = await axios.post(
         "http://localhost:8080/agent/user/" +
           JSON.parse(localStorage.getItem("UserData").agent_id) +
@@ -50,19 +48,16 @@ function AgentViewUser() {
         }
       );
 
-      // Handle the response and set the user data state
       console.log("User added successfully:", response.data);
 
-      // Close the form
       closeForm();
 
-      // Make an Axios GET request to fetch the updated user data
       const userResponse = await axios.get(
         "http://localhost:8080/agent/" +
           JSON.parse(localStorage.getItem("UserData").user_id) +
           "/user"
       );
-      // Handle the response and set the user data state
+
       console.log("User data fetched successfully:", userResponse.data);
       setUserData(userResponse.data);
     } catch (error) {

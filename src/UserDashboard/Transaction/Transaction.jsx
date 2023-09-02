@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import SideBar from "../SideBar/SideBar";
+import SideBar from "../SideBar/SideBar.jsx";
 import "./transaction.css";
 
 function Transaction() {
