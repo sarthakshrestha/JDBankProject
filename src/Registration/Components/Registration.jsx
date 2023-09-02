@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "./Register.css";
 // import { FaUser, FaLock } from "react-icons/fa6";
-// import { FaEnvelope, FaCalendarAlt, FaPhoneAlt } from "react-icons/fa";
-// import { FaLocationDot } from "react-icons/fa6";
+// import {FaEnvelope, FaCalendarAlt, FaPhoneAlt} from "react-icons/fa";
+// import {FaLocationDot} from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
-import Header from "../../Header/Header";
-import Footer from "../../Footer/Footer";
+import Header from "../../Header/Header.jsx";
+import Footer from "../../Footer/Footer.jsx";
+import axios from "axios";
 
 function Registration() {
   const [firstName, setFirstName] = useState("");
@@ -80,12 +80,12 @@ function Registration() {
         password: password,
         address: address,
         phoneNumber: phoneNumber,
-        dateOfBrith: dob,
+        dateOfBirth: dob,
         account: { balance: "1000" },
       };
 
       axios
-        .post("Add URL Here!", registerData)
+        .post("http://localhost:8080/home/register", registerData)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     }
@@ -212,10 +212,11 @@ function Registration() {
           </div>
         </form>
         <div className="already">
-          <NavLink to="/LoginDefault">
-            <p>Already have an account?</p>
-          </NavLink>
+          <p>Already have an account?</p>
+          <NavLink to="/Login">Click Here</NavLink>
         </div>
+        {/* <nav>
+        </nav> */}
       </div>
       <div className="footer-container">
         <Footer />
