@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 //initial localStorage value set to empty string
 localStorage.setItem("BearerData", JSON.stringify({}));
