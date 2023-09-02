@@ -98,7 +98,7 @@ function Registration() {
           );
         })
         .then(() => {
-          navTo("/UserDashboard");
+          navTo("/User");
         })
         .catch((error) => {
           console.error(error);
