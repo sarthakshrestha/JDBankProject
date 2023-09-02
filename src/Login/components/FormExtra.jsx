@@ -4,7 +4,7 @@ import "../pages/LoginPage.css";
 export default function FormExtra() {
   return (
     <div className="role-dropdown">
-      <label
+      {/* <label
         htmlFor="roles"
         className="block text-sm text-gray-900 mt-4"
         style={{ fontSize: "16px" }}
@@ -20,7 +20,7 @@ export default function FormExtra() {
         <option value="customer">Customer</option>
         <option value="agent">Agent</option>
         <option value="administrator">Administrator</option>
-      </select>
+      </select> */}
 
       <div className="below-form-container">
         <div className="lower-form">

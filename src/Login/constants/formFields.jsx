@@ -19,5 +19,20 @@ const loginFields = [
     isRequired: true,
     placeholder: "Enter your Password",
   },
+  {
+    labelText: "Role",
+    labelFor: "user-role",
+    id: "user-role",
+    name: "user-role",
+    type: "select",
+    // style: "height:300px",
+    isRequired: true,
+    options: [
+      { value: "USER_AGENT", label: "Agent" },
+      { value: "USER_CUSTOMER", label: "Customer" },
+      { value: "USER_ADMIN", label: "Admin" },
+    ],
+    placeholder: "Select User Role",
+  },
 ];
 export { loginFields };

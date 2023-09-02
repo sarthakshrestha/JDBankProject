@@ -4,13 +4,17 @@ import FormAction from "./FormAction";
 import FormExtra from "./FormExtra";
 import Input from "./Input";
 import "../pages/LoginPage.css";
+import { useNavigate } from "react-router-dom";
 
 const fields = loginFields;
 let fieldsState = {};
 fields.forEach((field) => (fieldsState[field.id] = ""));
 
+// fieldsState["role"] = "";
+
 export default function Login() {
   const [loginState, setLoginState] = useState(fieldsState);
+  const navTo = useNavigate();
 
   const handleChange = (e) => {
     setLoginState({ ...loginState, [e.target.id]: e.target.value });
@@ -24,16 +28,30 @@ export default function Login() {
   //Handle Login API Integration here
   const authenticateUser = () => {
     console.log(loginState);
+
     const data = {
-      email: loginState.email - address,
+      email: loginState.email,
       password: loginState.password,
-      role: "ROLE_USER", //add role value here
+      role: loginState.role,
     };
 
     axios
       .post("http://localhost:8080/home/login", data)
       .then((response) => {
-        console.log(response);
+        localStorage.setItem(
+          "UserToken",
+          JSON.stringify(response.data.accessToken)
+        );
+        localStorage.setItem("UserData", JSON.stringify(response.data.person));
+      })
+      .then(() => {
+        if (roleRef.current.value == "ROLE_USER") {
+          navTo("/UserDashboard");
+        } else if (roleRef.current.value == "ROLE_ADMIN") {
+          navTo("/Admin");
+        } else if (roleRef.current.value == "ROLE_AGENT") {
+          navTo("/Agent");
+        }
       })
       .catch((error) => {
         console.error(error);
