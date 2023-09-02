@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useContext, useRef } from "react";
+import { useRef } from "react";
 import "./LoginComponent.css";
 import { useNavigate } from "react-router-dom";
 
@@ -7,6 +7,7 @@ export default function LoginComponent() {
   let emailRef = useRef("");
   let passwordRef = useRef("");
   let roleRef = useRef("");
+  const navTo = useNavigate();
 
   function loginHandle() {
     const data = {
@@ -21,8 +22,6 @@ export default function LoginComponent() {
         localStorage.setItem("BearerData", JSON.stringify(response.data));
       })
       .then(() => {
-        const navTo = useNavigate();
-
         if (roleRef.current.value == "ROLE_USER") {
           navTo("/UserDashboard");
         } else if (roleRef.current.value == "ROLE_ADMIN") {
