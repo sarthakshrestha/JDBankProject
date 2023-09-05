@@ -13,9 +13,10 @@ function AgentViewUser() {
       try {
         const response = await axios.get(
           "http://localhost:8080/agent/" +
-            JSON.parse(localStorage.getItem("UserData").agent_id) +
+            JSON.parse(localStorage.getItem("UserData").person.agent_id) +
             "/user"
         );
+        //Changes
 
         console.log("User data fetched successfully:", response.data);
         setUserData(response.data);
@@ -38,23 +39,17 @@ function AgentViewUser() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const agent =  JSON.parse(localStorage.getItem("UserData"));
+      const apiURL = "http://localhost:8080/agent/user/" + agent?.agent_id + "/" +  userId;
       const response = await axios.post(
-        "http://localhost:8080/agent/user/" +
-          JSON.parse(localStorage.getItem("UserData").agent_id) +
-          "/" +
-          userId,
-        {
-          userId,
-        }
+        apiURL
       );
 
       console.log("User added successfully:", response.data);
 
       closeForm();
-
       const userResponse = await axios.get(
-        "http://localhost:8080/agent/" +
-          JSON.parse(localStorage.getItem("UserData").user_id) +
+        "http://localhost:8080/agent/" + agent?.agent_id+
           "/user"
       );
 
