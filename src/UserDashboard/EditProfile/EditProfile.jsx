@@ -82,12 +82,12 @@ function EditProfile() {
     // axios.get(url).then((res) => {
     //   userImage.current.src = res.data;});
 
-    axios
-    .get(url, { responseType: "arraybuffer",})
-    .then((response) => {
-      imageBase64 =  Buffer.from(response.data, "binary").toString("base64")});
+    axios.get(url, { responseType: "arraybuffer" }).then((response) => {
+      const imageBase64 = Buffer.from(response.data, "binary").toString(
+        "base64"
+      );
       userImage.current.src = `data:image/jpeg;base64,${imageBase64}`;
-    }
+    });
 
     // axios.get(url, { responseType: "arraybuffer" }).then((response) => {
     //   const imageBase64 = btoa(
