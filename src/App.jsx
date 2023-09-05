@@ -29,11 +29,11 @@ export default function App() {
             <Route
               path="/Login"
               element={
-                JSON.parse(localStorage.getItem("UserToken")) != "" &&
-                JSON.parse(localStorage.getItem("UserData")) != "" ? (
-                  <AccountPopUp />
-                ) : (
+                JSON.parse(localStorage.getItem("UserToken")) == null &&
+                JSON.parse(localStorage.getItem("UserData")) == null ? (
                   <LoginPageNewVersion />
+                ) : (
+                  <AccountPopUp />
                 )
               }
             />
@@ -43,11 +43,11 @@ export default function App() {
             <Route
               path="/Services/Login"
               element={
-                JSON.parse(localStorage.getItem("UserToken")) != "" &&
-                JSON.parse(localStorage.getItem("UserData")) != "" ? (
-                  <AccountPopUp />
-                ) : (
+                JSON.parse(localStorage.getItem("UserToken")) == null &&
+                JSON.parse(localStorage.getItem("UserData")) == null ? (
                   <LoginPageNewVersion />
+                ) : (
+                  <AccountPopUp />
                 )
               }
             />
@@ -57,11 +57,11 @@ export default function App() {
             <Route
               path="/ManagementTeam/Login"
               element={
-                JSON.parse(localStorage.getItem("UserToken")) != "" &&
-                JSON.parse(localStorage.getItem("UserData")) != "" ? (
-                  <AccountPopUp />
-                ) : (
+                JSON.parse(localStorage.getItem("UserToken")) == null &&
+                JSON.parse(localStorage.getItem("UserData")) == null ? (
                   <LoginPageNewVersion />
+                ) : (
+                  <AccountPopUp />
                 )
               }
             />
@@ -71,11 +71,11 @@ export default function App() {
             <Route
               path="/AboutUsPage/Login"
               element={
-                JSON.parse(localStorage.getItem("UserToken")) != "" &&
-                JSON.parse(localStorage.getItem("UserData")) != "" ? (
-                  <AccountPopUp />
-                ) : (
+                JSON.parse(localStorage.getItem("UserToken")) == null &&
+                JSON.parse(localStorage.getItem("UserData")) == null ? (
                   <LoginPageNewVersion />
+                ) : (
+                  <AccountPopUp />
                 )
               }
             />
@@ -85,11 +85,11 @@ export default function App() {
             <Route
               path="/Registration/Login"
               element={
-                JSON.parse(localStorage.getItem("UserToken")) != "" &&
-                JSON.parse(localStorage.getItem("UserData")) != "" ? (
-                  <AccountPopUp />
-                ) : (
+                JSON.parse(localStorage.getItem("UserToken")) == null &&
+                JSON.parse(localStorage.getItem("UserData")) == null ? (
                   <LoginPageNewVersion />
+                ) : (
+                  <AccountPopUp />
                 )
               }
             />
@@ -101,11 +101,11 @@ export default function App() {
             <Route
               path="/FAQ/Login"
               element={
-                JSON.parse(localStorage.getItem("UserToken")) != "" &&
-                JSON.parse(localStorage.getItem("UserData")) != "" ? (
-                  <AccountPopUp />
-                ) : (
+                JSON.parse(localStorage.getItem("UserToken")) == null &&
+                JSON.parse(localStorage.getItem("UserData")) == null ? (
                   <LoginPageNewVersion />
+                ) : (
+                  <AccountPopUp />
                 )
               }
             />

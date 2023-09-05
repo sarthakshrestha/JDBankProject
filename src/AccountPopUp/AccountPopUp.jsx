@@ -5,9 +5,9 @@ export default function AccountPopUp() {
   const navTo = useNavigate();
 
   function logoutHandle() {
-    localStorage.setItem("UserToken", JSON.stringify(""));
-    localStorage.setItem("UserData", JSON.stringify(""));
-    navTo("/");
+    localStorage.setItem("UserToken", null);
+    localStorage.setItem("UserData", null);
+    navTo(-1);
   }
 
   return (

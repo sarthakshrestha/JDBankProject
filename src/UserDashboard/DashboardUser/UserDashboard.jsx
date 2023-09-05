@@ -8,11 +8,10 @@ function UserDashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const user =  JSON.parse(localStorage.getItem("UserData"));
+    const user = JSON.parse(localStorage.getItem("UserData"));
     console.log(user);
 
-    const apiUrl =
-      "http://localhost:8080/user/" + user.user_id; // Replace with your API endpoint
+    const apiUrl = "http://localhost:8080/user/" + user.user_id; // Replace with your API endpoint
 
     axios
       .get(apiUrl)
