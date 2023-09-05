@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import logo from "../SideBar/Logo.png";
 import "./editprofile.css";
 import SideBar from "../SideBar/SideBar";
@@ -17,8 +17,7 @@ function EditProfile() {
 
   const [showSuccessPopup, setShowSuccessPopup] = useState(false); // State for success popup
 
-  const userImage = useRef();
-  const [userImageState, setUserImageState] = useState();
+  const [userImageState, setUserImageState] = useState(placeholder);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -79,25 +78,15 @@ function EditProfile() {
   };
 
   function setUploadedImage(url) {
-    // axios.get(url).then((res) => {
-    //   userImage.current.src = res.data;});
-
     axios.get(url, { responseType: "arraybuffer" }).then((response) => {
-      const imageBase64 = Buffer.from(response.data, "binary").toString(
-        "base64"
+      const imageBase64 = btoa(
+        new Uint8Array(response.data).reduce(
+          (data, byte) => data + String.fromCharCode(byte),
+          ""
+        )
       );
-      userImage.current.src = `data:image/jpeg;base64,${imageBase64}`;
+      setUserImageState(`data:image/jpeg;base64,${imageBase64}`);
     });
-
-    // axios.get(url, { responseType: "arraybuffer" }).then((response) => {
-    //   const imageBase64 = btoa(
-    //     new Uint8Array(response.data).reduce(
-    //       (data, byte) => data + String.fromCharCode(byte),
-    //       ""
-    //     )
-    //   );
-    //   userImage.current.src = `data:image/jpeg;base64,${imageBase64}`;
-    // });
   }
 
   const handleInputChange = (event) => {
@@ -178,7 +167,7 @@ function EditProfile() {
             </div>
           </form>
           <div className="image_change">
-            <img src={placeholder} alt="" ref={userImage} />
+            <img src={userImageState} alt="" />
             <h2>Upload New Profile Avatar</h2>
             <input
               type="file"
