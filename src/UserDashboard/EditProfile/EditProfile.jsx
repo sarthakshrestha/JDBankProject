@@ -77,8 +77,7 @@ function EditProfile() {
     }
   };
 
-  setUploadedImage(url);
-  {
+  function setUploadedImage(url) {
     axios.get(url).then((res) => {
       userImage.current.src = res.data;
     });
