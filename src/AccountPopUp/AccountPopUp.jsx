@@ -7,7 +7,7 @@ export default function AccountPopUp() {
   function logoutHandle() {
     localStorage.setItem("UserToken", null);
     localStorage.setItem("UserData", null);
-    navTo(-1);
+    navTo("");
   }
 
   return (
