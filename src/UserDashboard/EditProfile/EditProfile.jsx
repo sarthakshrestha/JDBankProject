@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../SideBar/Logo.png";
-import "./editprofile.css";
 import SideBar from "../SideBar/SideBar";
+import "./editprofile.css";
 import axios from "axios";
 import placeholder from "./placeholder.jpg";
 

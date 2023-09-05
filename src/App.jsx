@@ -1,14 +1,12 @@
 import "./App.css";
-import React, { useState } from "react";
-import { Route, Routes, useSearchParams } from "react-router-dom";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import Homepage from "./Homepage/Homepage";
 import ServicesMain from "./Services/ServiceMain";
 import MeetOurTeamPage from "./ManagmentTeamPage/MeetOurTeamPage";
 import AboutUsPage from "./AboutUspage/AboutUsPage";
 import RegistrationPage from "./Registration/RegistrationPage";
-import LoginPageNewVersion from "./LoginPage/LoginPageNewVersion";
 import LoginPage from "./Login/pages/LoginPage";
-import AccountPopUp from "./AccountPopUp/AccountPopUp";
 import FAQMain from "./FAQ/FAQMain.jsx";
 import AdminDashboard from "./Dashboard/Dashboard.jsx";
 import ViewAllUsers from "./Dashboard/ViewAllUsers.jsx";
@@ -19,6 +17,7 @@ import EditProfile from "./UserDashboard/EditProfile/EditProfile.jsx";
 import Transaction from "./UserDashboard/Transaction/Transaction.jsx";
 import AgentViewUser from "./AgentDashboard/AgentViewUser/AgentViewUser.jsx";
 import DepositWithdraw from "./AgentDashboard/DepositWithdraw/DepositWithdraw.jsx";
+import AccountBubble from "./AccountBubble/AccountBubble";
 
 export default function App() {
   return (
@@ -26,90 +25,31 @@ export default function App() {
       <>
         <Routes>
           <Route path="/" element={<Homepage />}>
-            <Route
-              path="/Login"
-              element={
-                JSON.parse(localStorage.getItem("UserToken")) == null &&
-                JSON.parse(localStorage.getItem("UserData")) == null ? (
-                  <LoginPageNewVersion />
-                ) : (
-                  <AccountPopUp />
-                )
-              }
-            />
+            <Route path="/Login" element={<AccountBubble />} />
           </Route>
 
           <Route path="/Services" element={<ServicesMain />}>
-            <Route
-              path="/Services/Login"
-              element={
-                JSON.parse(localStorage.getItem("UserToken")) == null &&
-                JSON.parse(localStorage.getItem("UserData")) == null ? (
-                  <LoginPageNewVersion />
-                ) : (
-                  <AccountPopUp />
-                )
-              }
-            />
+            <Route path="/Services/Login" element={<AccountBubble />} />
           </Route>
 
           <Route path="/ManagementTeam" element={<MeetOurTeamPage />}>
-            <Route
-              path="/ManagementTeam/Login"
-              element={
-                JSON.parse(localStorage.getItem("UserToken")) == null &&
-                JSON.parse(localStorage.getItem("UserData")) == null ? (
-                  <LoginPageNewVersion />
-                ) : (
-                  <AccountPopUp />
-                )
-              }
-            />
+            <Route path="/ManagementTeam/Login" element={<AccountBubble />} />
           </Route>
 
           <Route path="/AboutUsPage" element={<AboutUsPage />}>
-            <Route
-              path="/AboutUsPage/Login"
-              element={
-                JSON.parse(localStorage.getItem("UserToken")) == null &&
-                JSON.parse(localStorage.getItem("UserData")) == null ? (
-                  <LoginPageNewVersion />
-                ) : (
-                  <AccountPopUp />
-                )
-              }
-            />
+            <Route path="/AboutUsPage/Login" element={<AccountBubble />} />
           </Route>
 
           <Route path="/Registration" element={<RegistrationPage />}>
-            <Route
-              path="/Registration/Login"
-              element={
-                JSON.parse(localStorage.getItem("UserToken")) == null &&
-                JSON.parse(localStorage.getItem("UserData")) == null ? (
-                  <LoginPageNewVersion />
-                ) : (
-                  <AccountPopUp />
-                )
-              }
-            />
+            <Route path="/Registration/Login" element={<AccountBubble />} />
           </Route>
 
           <Route path="/LoginDefault" element={<LoginPage />} />
 
           <Route path="/FAQ" element={<FAQMain />}>
-            <Route
-              path="/FAQ/Login"
-              element={
-                JSON.parse(localStorage.getItem("UserToken")) == null &&
-                JSON.parse(localStorage.getItem("UserData")) == null ? (
-                  <LoginPageNewVersion />
-                ) : (
-                  <AccountPopUp />
-                )
-              }
-            />
+            <Route path="/FAQ/Login" element={<AccountBubble />} />
           </Route>
+
           <Route path="/Agent" element={<AgentViewUser />} />
           <Route
             path="/Agent/DepositOrWithdraw"
