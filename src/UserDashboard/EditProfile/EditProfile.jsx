@@ -17,6 +17,8 @@ function EditProfile() {
 
   const [showSuccessPopup, setShowSuccessPopup] = useState(false); // State for success popup
 
+  const userImage = useRef();
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -26,9 +28,8 @@ function EditProfile() {
         ([key, value]) => value !== null && value !== ""
       )
     );
-    const user =  JSON.parse(localStorage.getItem("UserData"));
-    const apiUrl =
-      "http://localhost:8080/user/" + user.user_id; // Replace with your API endpoint
+    const user = JSON.parse(localStorage.getItem("UserData"));
+    const apiUrl = "http://localhost:8080/user/" + user.user_id; // Replace with your API endpoint
 
     axios
       .put(apiUrl, filteredData)
@@ -49,12 +50,11 @@ function EditProfile() {
     if (file) {
       // Create a FormData object to send the image file to the server
       const formData = new FormData();
-      formData.append("avatar", file);
+      formData.append("image", file);
 
-      const user =  JSON.parse(localStorage.getItem("UserData"));
+      const user = JSON.parse(localStorage.getItem("UserData"));
       // Send the image to the server using Axios
-      const apiUrl =
-        "http://localhost:8080/user/upload/" + user.user_id; // Replace with your API endpoint for image upload
+      const apiUrl = "http://localhost:8080/user/upload/" + user.user_id;
 
       axios
         .post(apiUrl, formData, {
@@ -66,7 +66,9 @@ function EditProfile() {
           console.log("Avatar image updated successfully:", response.data);
 
           // Set the uploadedImage state with the new avatar image URL
-          setUploadedImage(response.data.avatarImageUrl);
+          setUploadedImage(
+            "http://localhost:8080/user/download/" + user.user_id
+          );
         })
         .catch((error) => {
           console.error("Error uploading avatar image:", error);
@@ -74,6 +76,13 @@ function EditProfile() {
         });
     }
   };
+
+  setUploadedImage(url);
+  {
+    axios.get(url).then((res) => {
+      userImage.current.src = res.data;
+    });
+  }
 
   const handleInputChange = (event) => {
     const { id, value } = event.target;
@@ -153,7 +162,7 @@ function EditProfile() {
             </div>
           </form>
           <div className="image_change">
-            <img src={placeholder} alt="" />
+            <img src={placeholder} alt="" ref={userImage} />
             <h2>Upload New Profile Avatar</h2>
             <input
               type="file"
