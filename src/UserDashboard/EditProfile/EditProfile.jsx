@@ -78,9 +78,13 @@ function EditProfile() {
   };
 
   function setUploadedImage(url) {
-    axios.get(url).then((res) => {
-      userImage.current.src = res.data;
-    });
+    
+      // axios.get(url).then((res) => {
+      //   userImage.current.src = res.data;});
+
+      axios
+      .get(url, { responseType: "arraybuffer",})
+      .then((response) => {userImage.current.src =  Buffer.from(response.data, "binary").toString("base64")});}
   }
 
   const handleInputChange = (event) => {
