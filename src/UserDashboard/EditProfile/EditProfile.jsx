@@ -18,6 +18,7 @@ function EditProfile() {
   const [showSuccessPopup, setShowSuccessPopup] = useState(false); // State for success popup
 
   const userImage = useRef();
+  const [userImageState, setUserImageState] = useState();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -78,13 +79,24 @@ function EditProfile() {
   };
 
   function setUploadedImage(url) {
-    
-      // axios.get(url).then((res) => {
-      //   userImage.current.src = res.data;});
+    // axios.get(url).then((res) => {
+    //   userImage.current.src = res.data;});
 
-      axios
-      .get(url, { responseType: "arraybuffer",})
-      .then((response) => {userImage.current.src =  Buffer.from(response.data, "binary").toString("base64")});}
+    // axios
+    // .get(url, { responseType: "arraybuffer",})
+    // .then((response) => {
+    //   userImage.current.src =  Buffer.from(response.data, "binary").toString("base64")});
+    // }
+
+    axios.get(url, { responseType: "arraybuffer" }).then((response) => {
+      const imageBase64 = btoa(
+        new Uint8Array(response.data).reduce(
+          (data, byte) => data + String.fromCharCode(byte),
+          ""
+        )
+      );
+      userImage.current.src = `data:image/jpeg;base64,${imageBase64}`;
+    });
   }
 
   const handleInputChange = (event) => {
