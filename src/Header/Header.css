@@ -1,150 +1,120 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .header {
-  position: relative;
-  display: block;
-  width: 100vw;
-  height: 160px;
-  top: -100px;
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: 160px;
+    top: -100px;
 }
 
 .headerDivider {
-  width: 100%;
-  height: 0.2rem;
-  background-color: #5970e1;
+    width: 100%;
+    height: 0.2rem;
+    background-color: #5970e1;
 }
 
 .headerUpper {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 80px;
-  background-color: #5970e1;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: #5970e1;
 }
 
 .headerUpper_Logo {
-  position: relative;
-  left: 2%;
+    position: relative;
+    left: 2%;
 }
 
 .headerUpper_Logo img {
-  width: 80px;
-  height: 80px;
+    width: 80px;
+    height: 80px;
 }
 
 .headerUpper_BankName {
-  width: 180px;
-  height: 80px;
-  position: relative;
-  left: 2%;
-  top: 30%;
+    width: 180px;
+    height: 80px;
+    position: relative;
+    left: 2%;
+    top: 30%;
 
-  color: white;
-  font-size: 32px;
-  text-align: center;
+    color: white;
+    font-size: 32px;
+    text-align: center;
 }
 
 .headerUpper_AccountButton {
-  width: 100px;
-  height: 35px;
-  position: absolute;
-  right: 2rem;
-  top: 30%;
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    right: 2rem;
+    top: 30%;
 
-  text-align: center;
-  font-weight: bold;
-  font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
 
-  border: 0px none white;
-  border-radius: 50px;
+    border: 0px none white;
+    border-radius: 50px;
 }
 
 .headerUpper_AccountButton:hover {
-  filter: invert(1);
-  transition: 600ms;
+    filter: invert(1);
+    transition: 600ms;
 }
 
 .headerUpper_AccountButton:focus {
-  outline: none;
+    outline: none;
 }
 
+
 .headerLower {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 65px;
-  background-color: #f4f4f4;
+    position: relative;
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-left: 50px;
 }
 
 .headerLower_Nav {
-  height: 40px;
-  position: absolute;
+    height: 50px;
+    position: absolute;
 
-  list-style-type: none;
-  display: flex;
+    list-style-type: none;
+    display: flex;
 
-  font-size: 19px;
-  font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .headerLower_Nav li {
-  margin-right: 40px;
+    margin-right: 40px;
 }
 
 .headerLower_Nav a {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 
-  transition: 0.3s;
-}
-
-.headerLower_SearchBox_containter {
-  position: absolute;
-  right: 2%;
-  top: 30%;
-  text-decoration: none;
+    transition: 0.3s;
 }
 
 svg {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  right: 10%;
-  left: -30px;
-  top: -30px;
-  margin-left: 230px;
-}
-
-.headerLower_SearchBox {
-  display: flex;
-  align-items: center;
-  width: 250px;
-  height: 35px;
-  padding-left: 10px;
-  border: 10px solid white;
-  border-radius: 50px;
-}
-
-.headerLower_SearchBox input {
-  border: none;
-  outline: none;
-  flex: 1;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    right: 10%;
+    left: -30px;
+    top: -30px;
+    margin-left: 230px;
 }
 
 svg {
-  position: relative;
-  bottom: 7%;
+    position: relative;
+    bottom: 7%;
 }
 
-.headerLower_SearchBox_button {
-  position: absolute;
-  right: 10%;
-  top: 20%;
 
-  background-color: white;
-
-  border-radius: 50px;
-  border: 0px none white;
-}
