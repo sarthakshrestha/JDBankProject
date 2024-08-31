@@ -65,7 +65,6 @@ const Section = ({ image, title, icon, description, reverse }) => (
 
 const styles = {
     container: {
-        width: '180vh',
         backgroundColor: '#ffffff',
         padding: '60px',
         margin: '0 auto',

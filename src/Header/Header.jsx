@@ -73,7 +73,6 @@ const styles = {
     backgroundColor: "#ffffff",
     marginTop: "-100px",
     padding: "15px 30px",
-    boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
   },
   headerUpper: {
     display: "flex",

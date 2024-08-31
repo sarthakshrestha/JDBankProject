@@ -80,7 +80,6 @@ function FAQPage() {
 const styles = {
   fullPage: {
     backgroundColor: '#ffffff',
-    width: '180vh',
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',

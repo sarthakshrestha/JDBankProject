@@ -59,7 +59,6 @@ const ServiceSection = ({ image, title, description, icon, reverse }) => (
 
 const styles = {
   container: {
-    width: '180vh',
     backgroundColor: '#ffffff',
     padding: '60px',
     margin: '0 auto',
@@ -80,7 +79,6 @@ const styles = {
     width: '100%',
     height: 'auto',
     borderRadius: '8px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
   },
   descriptionContainer: {
     flex: '1',

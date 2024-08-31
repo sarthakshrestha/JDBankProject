@@ -30,7 +30,6 @@ const styles = {
   app: {
     backgroundColor: "#fff",
     marginTop: "110px",
-    width: '180vh',
   },
   separator: {
     border: "none",
