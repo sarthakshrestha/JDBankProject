@@ -1,30 +1,40 @@
 import React from "react";
-import "./LandingPage.css";
 import Money from "./Components/Money.jsx";
 import Investment from "./Components/Investment.jsx";
-import LoanPlans from "./Components/LoanPlans";
-import DepositPlans from "./Components/DepositPlans";
-import FAQSection from "./Components/FAQSection";
-import Services from "./Components/Services";
-import Header from "../Header/Header.jsx";
+import LoanPlans from "./Components/LoanPlans.jsx";
+import DepositPlans from "./Components/DepositPlans.jsx";
+import FAQSection from "./Components/FAQSection.jsx";
+import Services from "./Components/Services.jsx";
 import ImageSlider from "../ImageSlider/ImageSlider.jsx";
-import Footer from "../Footer/Footer.jsx";
 
 export default function LandingPage() {
-    return (
-        <div className="App">
-            <ImageSlider/>
-            <Money/>
-            <hr className="separator-line"/>
-            <Investment/>
-            <hr className="separator-line"/>
-            <LoanPlans/>
-            <hr className="separator-line"/>
-            <DepositPlans/>
-            <hr className="separator-line"/>
-            <FAQSection/>
-            <hr className="separator-line"/>
-            <Services/>
-        </div>
-    );
+  return (
+    <div style={styles.app}>
+      <ImageSlider />
+      <Money />
+      <hr style={styles.separator} />
+      <Investment />
+      <hr style={styles.separator} />
+      <LoanPlans />
+      <hr style={styles.separator} />
+      <DepositPlans />
+      <hr style={styles.separator} />
+      <FAQSection />
+      <hr style={styles.separator} />
+      <Services />
+    </div>
+  );
 }
+
+const styles = {
+  app: {
+    backgroundColor: "#fff",
+    marginTop: "110px",
+    width: '180vh',
+  },
+  separator: {
+    border: "none",
+    borderTop: "1px solid #e0e0e0",
+    margin: "20px 0",
+  },
+};

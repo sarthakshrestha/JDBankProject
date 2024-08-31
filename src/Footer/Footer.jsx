@@ -1,76 +1,80 @@
-import "./Footer.css";
+import React from "react";
 import logo from "./Images/Logo.png";
 import { NavLink } from "react-router-dom";
 
 export default function Footer() {
     return (
-        <footer className="footer">
-            <div className="footerLeft">
-                <img src={logo} alt="Logo" className="footerLogo" />
-                <div className="footer_BankName">JD Bank.co</div>
+        <footer
+            style={{
+                backgroundColor: "#002b5b",
+                color: "#ffffff",
+                padding: "20px 40px",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+            }}
+        >
+            <div style={{ display: "flex", alignItems: "center" }}>
+                <img src={logo} alt="Logo" style={{ height: "60px", marginRight: "15px" }} />
+                <div style={{ fontSize: "24px", fontWeight: "bold" }}>JD Bank.co</div>
             </div>
 
-            <div className="footerRight">
-                <div className="footerRightTop">
-                    <div className="JDBankCustomerSupport">
-                        <h4>Customer</h4>
-                        <h4>Support</h4>
-                        <ul>
-                            <li>
-                                <NavLink to="/Loan Services">jdbank@support.com.np</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="">+01-56969696</NavLink>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div className="services">
-                        <h4>Services</h4>
-                        <ul>
-                            <li>
-                                <NavLink to="/Loan Services">Loan Services</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/ATMLocations">ATM Locations</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/Headquaters">Headquarters</NavLink>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div className="aboutUs">
-                        <h4>About Us</h4>
-                        <ul>
-                            <li>
-                                <NavLink to="/HistoryOfJDBank">History of JDBank</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/ManagementTeam">JD Bank - Team</NavLink>
-                            </li>
-                        </ul>
-                    </div>
+            <div style={{ display: "flex", justifyContent: "space-between", width: "70%" }}>
+                <div style={{ marginRight: "40px" }}>
+                    <h4 style={{ fontSize: "18px", marginBottom: "10px" }}>Customer Support</h4>
+                    <ul style={{ listStyleType: "none", padding: 0 }}>
+                        <li style={{ marginBottom: "8px" }}>
+                            <NavLink to="/Loan Services" style={{ color: "#ffffff", textDecoration: "none" }}>jdbank@support.com.np</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="" style={{ color: "#ffffff", textDecoration: "none" }}>+01-56969696</NavLink>
+                        </li>
+                    </ul>
                 </div>
 
-                <div className="footerRightBottom">
-                    <div className="socialMedia">
-                        <h4>Follow Us</h4>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com" target="_blank">
-                                <i id="social-fb" class="fa fa-facebook-square fa-2x social"></i>
-                            </a>
-                            <a href="https://www.twitter.com" target="_blank">
-                                <i id="social-tw" class="fa fa-twitter-square fa-2x social"></i>
-                            </a>
-                            <a href="https://www.gmail.com" target="_blank">
-                                <i id="social-gp" class="fa fa-google-plus-square fa-2x social"></i>
-                            </a>
-                            <a href="mailto:" target="_blank">
-                                <i id="social-em" class="fa fa-envelope-square fa-2x social"></i>
-                            </a>
-                        </div>
-                    </div>
+                <div style={{ marginRight: "40px" }}>
+                    <h4 style={{ fontSize: "18px", marginBottom: "10px" }}>Services</h4>
+                    <ul style={{ listStyleType: "none", padding: 0 }}>
+                        <li style={{ marginBottom: "8px" }}>
+                            <NavLink to="/Loan Services" style={{ color: "#ffffff", textDecoration: "none" }}>Loan Services</NavLink>
+                        </li>
+                        <li style={{ marginBottom: "8px" }}>
+                            <NavLink to="/ATMLocations" style={{ color: "#ffffff", textDecoration: "none" }}>ATM Locations</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/Headquaters" style={{ color: "#ffffff", textDecoration: "none" }}>Headquarters</NavLink>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style={{ fontSize: "18px", marginBottom: "10px" }}>About Us</h4>
+                    <ul style={{ listStyleType: "none", padding: 0 }}>
+                        <li style={{ marginBottom: "8px" }}>
+                            <NavLink to="/HistoryOfJDBank" style={{ color: "#ffffff", textDecoration: "none" }}>History of JDBank</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/ManagementTeam" style={{ color: "#ffffff", textDecoration: "none" }}>JD Bank - Team</NavLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h4 style={{ fontSize: "18px", marginBottom: "10px" }}>Follow Us</h4>
+                <div style={{ display: "flex", gap: "15px" }}>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                        <i className="fa fa-facebook-square fa-2x" style={{ color: "#ffffff" }}></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                        <i className="fa fa-twitter-square fa-2x" style={{ color: "#ffffff" }}></i>
+                    </a>
+                    <a href="https://www.gmail.com" target="_blank" rel="noopener noreferrer">
+                        <i className="fa fa-google-plus-square fa-2x" style={{ color: "#ffffff" }}></i>
+                    </a>
+                    <a href="mailto:" target="_blank" rel="noopener noreferrer">
+                        <i className="fa fa-envelope-square fa-2x" style={{ color: "#ffffff" }}></i>
+                    </a>
                 </div>
             </div>
         </footer>

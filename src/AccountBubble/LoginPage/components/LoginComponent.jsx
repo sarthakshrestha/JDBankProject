@@ -1,7 +1,7 @@
 import axios from "axios";
-import {useRef} from "react";
+import { useRef } from "react";
 import "./LoginComponent.css";
-import {NavLink, useNavigate} from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function LoginComponent() {
     let emailRef = useRef("");
@@ -45,42 +45,96 @@ export default function LoginComponent() {
 
     return (
         <>
-            <div className="LoginContainer">
-                <h4>You must register to join</h4>
-                <p>We have a team to guide you</p>
+            <div className="LoginContainer" style={{
+                backgroundColor: "#002b5b",
+                height: "500px",
+
+            }}>
+                <h4 style={{ marginBottom: "20px" }}>You must register to join</h4>
+                <p style={{ marginBottom: "30px", color: "white" }}>We have a team to guide you</p>
 
                 <div className="emailDiv">
-                    <p>Email</p>
+                    <p style={{marginLeft: "-60px", color: "white"}}>Email</p>
                     <input
                         type="email"
                         isRequired
                         placeholder="user@gmail.com"
                         ref={emailRef}
+                        style={{
+                            width: "80%",
+                            padding: "10px",
+                            borderRadius: "5px",
+                            border: "1px solid #ccc",
+                            marginBottom: "10px",
+                        }}
                     />
                 </div>
                 <div className="passwordDiv">
-                    <p>Password</p>
+                    <p style={{marginLeft: "-60px", color: "white"}}>Password</p>
                     <input
                         type="password"
                         isRequired
                         placeholder="password"
                         ref={passwordRef}
+                        style={{
+                            width: "80%",
+                            padding: "10px",
+                            borderRadius: "5px",
+                            border: "1px solid #ccc",
+                            marginBottom: "10px",
+                        }}
                     />
                 </div>
 
-                <div className="roleDiv">
-                    <select defaultValue="ROLE_USER" ref={roleRef}>
+                <div style={{ marginBottom: "30px" }}>
+                    <select
+                        defaultValue="ROLE_USER"
+                        ref={roleRef}
+                        style={{
+                            width: "80%",
+                            padding: "10px",
+                            borderRadius: "5px",
+                            border: "1px solid #ccc",
+                            backgroundColor: "#ffffff",
+                            color: "#002b5b",
+                        }}
+                    >
                         <option value="ROLE_USER">User</option>
                         <option value="ROLE_ADMIN">Admin</option>
                         <option value="ROLE_AGENT">Agent</option>
                     </select>
                 </div>
 
-                <button className="logInButton" onClick={loginHandle}>
+                <button
+                    onClick={loginHandle}
+                    style={{
+                        width: "80%",
+                        padding: "12px",
+                        borderRadius: "5px",
+                        backgroundColor: "#004080",
+                        color: "#ffffff",
+                        border: "none",
+                        cursor: "pointer",
+                        marginBottom: "15px",
+                        fontWeight: "bold",
+                    }}
+                >
                     Log In
                 </button>
 
-                <button className="SignUpButton" onClick={() => navTo("/Registration")}>
+                <button
+                    onClick={() => navTo("/Registration")}
+                    style={{
+                        width: "80%",
+                        padding: "12px",
+                        borderRadius: "5px",
+                        backgroundColor: "#ffffff",
+                        color: "#002b5b",
+                        border: "1px solid #004080",
+                        cursor: "pointer",
+                        fontWeight: "bold",
+                    }}
+                >
                     Sign Up
                 </button>
             </div>
